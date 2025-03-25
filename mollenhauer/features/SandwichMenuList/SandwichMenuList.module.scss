@@ -9,6 +9,7 @@
   position: fixed;
   top: 0;
   right: 0;
+  flex-direction: column;
 
   .header {
     display: flex;
@@ -25,10 +26,30 @@
     list-style-type: none;
     @include fontS26W300;
     color: var(--white-color);
-		gap: 32px;
+    gap: 32px;
+  }
+
+  .docs {
+    display: flex;
+    gap: 30;
+    list-style-type: none;
+    margin: auto 0 0 0;
+    flex-shrink: 0;
+    @include fontS16W400;
+    color: var(--white-color);
+
+    .docItem {
+      position: relative;
+
+      &:not(:last-child)::after {
+        content: "l";
+        margin-left: 15px;
+        position: absolute;
+      }
+    }
   }
 }
 
 .visible {
-  display: block;
+  display: flex;
 }

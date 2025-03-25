@@ -7,7 +7,7 @@ import { Language } from "@/features/Language/Language";
 
 import s from "./SandwichMenuList.module.scss";
 
-import { menu } from "@/shared/mocks/menuList";
+import { menu, docsList } from "@/shared/mocks/menuList";
 import { Button } from "@/components/Button/Button";
 
 interface SandwichMenuList {
@@ -38,6 +38,13 @@ export const SandwichMenuList: FC<SandwichMenuList> = ({
         text="Contact Us"
         variant="orange"
       />
+      <ul className={s.docs}>
+        {docsList.map((item) => (
+          <li key={item.id} className={s.docItem}>
+            <Link href={item.link}>{item.text}</Link>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };

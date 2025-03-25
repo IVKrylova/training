@@ -32,3 +32,16 @@ export const menu: Menu = [
     link: "/",
   },
 ];
+
+export const docsList: Menu = [
+  {
+    id: 1,
+    text: "Imprint",
+    link: "/",
+  },
+  {
+    id: 2,
+    text: "Data Privacy",
+    link: "/",
+  },
+];
