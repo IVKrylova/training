@@ -8,6 +8,7 @@ interface Button {
   variant: "orange" | "white" | "blue";
   text: string;
   onClick: () => void;
+  clssName?: string;
 }
 
 export const Button: FC<Button> = ({
@@ -15,6 +16,7 @@ export const Button: FC<Button> = ({
   variant,
   text,
   onClick,
+  clssName,
 }): ReactNode => {
   return (
     <button
@@ -25,7 +27,8 @@ export const Button: FC<Button> = ({
           [s.white]: variant === "white",
           [s.blue]: variant === "blue",
         },
-        s.button
+        s.button,
+        clssName
       )}
       onClick={onClick}
     >
