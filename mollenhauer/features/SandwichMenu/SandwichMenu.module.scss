@@ -1,3 +1,10 @@
+@import "../../styles/media";
+
 .wrap {
   position: relative;
+
+  @include tablet {
+    padding: 14px 44px 15px 30px;
+    background-color: var(--white-color);
+  }
 }

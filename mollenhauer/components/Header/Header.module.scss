@@ -1,8 +1,27 @@
+@import "../../styles/media";
+
 .header {
   display: flex;
   position: fixed;
   justify-content: space-between;
   margin-top: 8px;
   align-items: flex-end;
-  width: calc(100% - 32px);
+  width: 100%;
+  padding: 0 16px;
+
+  @include tablet {
+    padding: 0 0 0 44px;
+    align-items: center;
+  }
+
+  .langWrap {
+    display: none;
+
+    @include tablet {
+      margin-right: 2px;
+      flex-grow: 1;
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
 }

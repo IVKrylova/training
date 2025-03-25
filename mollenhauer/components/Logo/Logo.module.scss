@@ -1,0 +1,8 @@
+@import "../../styles/media";
+
+.logo {
+  @include tablet {
+    height: 42px;
+    width: 238px;
+  }
+}
