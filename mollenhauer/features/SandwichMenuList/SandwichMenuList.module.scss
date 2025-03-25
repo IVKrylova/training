@@ -1,0 +1,34 @@
+@import "../../styles/fonts";
+
+.wrap {
+  display: none;
+  background-color: var(--orange-color);
+  width: 346px;
+  padding: 11px 20px 49px 49px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  .header {
+    display: flex;
+    margin: 0 auto;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .list {
+    display: flex;
+    flex-direction: column;
+    margin: 81px 0 42px;
+    list-style-type: none;
+    @include fontS26W300;
+    color: var(--white-color);
+		gap: 32px;
+  }
+}
+
+.visible {
+  display: block;
+}

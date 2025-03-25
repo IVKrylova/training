@@ -1,6 +1,11 @@
 :root {
   --background: #f7f9fc;
   --foreground: #313131;
+  --orange-color: #ff7c40;
+  --white-color: #ffffff;
+  --blue-color: #06255b;
+  --dark-orange-color: #da5d24;
+  --orange-hovered-color: #ba4e1d;
 }
 
 html,

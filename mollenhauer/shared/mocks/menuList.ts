@@ -1,0 +1,34 @@
+import { Menu } from "../types/menu";
+
+export const menu: Menu = [
+  {
+    id: 1,
+    text: "Services",
+    link: "/",
+  },
+  {
+    id: 2,
+    text: "Know How",
+    link: "/",
+  },
+  {
+    id: 3,
+    text: "Projects & References",
+    link: "/",
+  },
+  {
+    id: 4,
+    text: "Our Company",
+    link: "/",
+  },
+  {
+    id: 5,
+    text: "Our Clients",
+    link: "/",
+  },
+  {
+    id: 6,
+    text: "Careers",
+    link: "/",
+  },
+];
