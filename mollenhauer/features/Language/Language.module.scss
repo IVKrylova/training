@@ -24,6 +24,11 @@
       opacity: 40%;
       @include fontS15W400;
       padding: 6px;
+
+      &:hover {
+        opacity: 100%;
+        text-decoration: underline;
+      }
     }
 
     .active {
