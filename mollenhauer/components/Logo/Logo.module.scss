@@ -1,0 +1,13 @@
+@import "../../styles/media";
+
+.logo {
+  @include tablet {
+    height: 42px;
+    width: 238px;
+  }
+
+  @include desktop {
+    height: 46px;
+    width: 263px;
+  }
+}

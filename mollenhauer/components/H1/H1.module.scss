@@ -1,0 +1,6 @@
+@import "../../styles/fonts";
+
+.title {
+  @include fontS38W400;
+  color: var(--ligth-text-color);
+}

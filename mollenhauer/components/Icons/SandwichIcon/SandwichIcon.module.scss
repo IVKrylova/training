@@ -1,0 +1,14 @@
+@import "../../../styles/media";
+
+.icon {
+  cursor: pointer;
+
+  @include tablet {
+    width: 33px;
+    height: 23px;
+
+    line {
+      stroke: var(--main-color);
+    }
+  }
+}
