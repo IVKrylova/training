@@ -1,12 +1,17 @@
 import { ReactNode, FC } from "react";
+import cn from "classnames";
 
 import s from "./SandwichIcon.module.scss";
 
 interface SandwichIcon {
   onClick: () => void;
+  className?: string;
 }
 
-export const SandwichIcon: FC<SandwichIcon> = ({ onClick }): ReactNode => {
+export const SandwichIcon: FC<SandwichIcon> = ({
+  onClick,
+  className,
+}): ReactNode => {
   return (
     <svg
       width="45"
@@ -17,7 +22,7 @@ export const SandwichIcon: FC<SandwichIcon> = ({ onClick }): ReactNode => {
       role="button"
       aria-label="icon sandwich menu"
       onClick={onClick}
-      className={s.icon}
+      className={cn(s.icon, className)}
     >
       <line
         x1="11"

@@ -9,6 +9,12 @@
   }
 
   @include desktop {
-    display: none;;
+    display: none;
+  }
+}
+
+.scrolled {
+  line {
+    stroke: var(--blue-color);
   }
 }
