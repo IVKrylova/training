@@ -5,7 +5,7 @@ import s from "./Button.module.scss";
 
 interface Button {
   type: "submit" | "button";
-  variant: "orange" | "white" | "blue";
+  variant: "orange" | "white" | "default";
   text: string;
   onClick: () => void;
   clssName?: string;
@@ -25,7 +25,7 @@ export const Button: FC<Button> = ({
         {
           [s.orange]: variant === "orange",
           [s.white]: variant === "white",
-          [s.blue]: variant === "blue",
+          [s.default]: variant === "default",
         },
         s.button,
         clssName

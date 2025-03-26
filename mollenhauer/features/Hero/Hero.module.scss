@@ -1,0 +1,58 @@
+@import "../../styles/fonts";
+
+.section {
+  background-image: url(../../public/bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 141px 31px 61px 16px;
+	position: relative;
+
+  .title {
+    letter-spacing: -3px;
+  }
+
+  .bold {
+    font-weight: 600;
+  }
+
+  .text {
+    @include fontS18W400;
+    max-width: 264px;
+    color: var(--white-color);
+
+    &:first-of-type {
+      margin-top: 24px;
+    }
+
+    &:last-of-type {
+      margin-top: 28px;
+    }
+  }
+
+  .advanteges {
+    margin-top: 40;
+    display: flex;
+    gap: 24px;
+    @include fontS20W900;
+    color: var(--white-color);
+  }
+
+  .buttons {
+    display: flex;
+    gap: 16px;
+    margin-top: 40px;
+  }
+
+	&::after {
+		content: "";
+		background-image: url(../../public/orangeTriangle.png);
+		position: absolute;
+		top: 256px;
+		right: 0;
+		height: 232px;
+		width: 98px;
+		z-index: 10;
+	}
+}
+
+

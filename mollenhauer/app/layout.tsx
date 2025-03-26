@@ -11,7 +11,7 @@ import s from "./page.module.scss";
 const sourceCodePro = Source_Code_Pro({
   variable: "--font-source-code-pro",
   subsets: ["latin"],
-  weight: ["300", "400", "600"],
+  weight: ["300", "400", "600", "900"],
 });
 
 export const metadata: Metadata = {
