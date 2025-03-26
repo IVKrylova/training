@@ -1,14 +1,20 @@
 @import "../../styles/fonts";
+@import "../../styles/media";
 
 .section {
   background-image: url(../../public/bg.png);
   background-repeat: no-repeat;
   background-size: cover;
   padding: 141px 31px 61px 16px;
-	position: relative;
+
+  @include tablet {
+    background-image: url(../../public/bgTablet.png);
+    padding: 205px 0 327px 44px;
+  }
 
   .title {
     letter-spacing: -3px;
+    max-width: 460px;
   }
 
   .bold {
@@ -19,6 +25,7 @@
     @include fontS18W400;
     max-width: 264px;
     color: var(--white-color);
+    max-width: 380px;
 
     &:first-of-type {
       margin-top: 24px;
@@ -35,6 +42,10 @@
     gap: 24px;
     @include fontS20W900;
     color: var(--white-color);
+
+    @include tablet {
+      display: none;
+    }
   }
 
   .buttons {
@@ -43,16 +54,21 @@
     margin-top: 40px;
   }
 
-	&::after {
-		content: "";
-		background-image: url(../../public/orangeTriangle.png);
-		position: absolute;
-		top: 256px;
-		right: 0;
-		height: 232px;
-		width: 98px;
-		z-index: 10;
-	}
+  &::after {
+    content: "";
+    background-image: url(../../public/orangeTriangle.png);
+    position: absolute;
+    top: 256px;
+    right: 0;
+    height: 232px;
+    width: 98px;
+    z-index: 10;
+
+    @include tablet {
+      background-image: url(../../public/advantages.png);
+      top: 278px;
+      height: 500px;
+      width: 390px;
+    }
+  }
 }
-
-
