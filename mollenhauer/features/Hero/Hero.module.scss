@@ -12,6 +12,11 @@
     padding: 205px 0 327px 44px;
   }
 
+	@include desktop {
+		background-image: url(../../public/bgDesktop.png);
+    padding: 279px 0 350px 170px;
+	}
+
   .title {
     letter-spacing: -3px;
     max-width: 460px;
@@ -69,6 +74,13 @@
       top: 278px;
       height: 500px;
       width: 390px;
+    }
+
+		@include desktop {
+      background-image: url(../../public/desktopAdv.png);
+			top: 145px;
+			height: 675px;
+			width: 740px;
     }
   }
 }
