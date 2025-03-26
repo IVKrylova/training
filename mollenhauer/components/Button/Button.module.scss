@@ -1,0 +1,17 @@
+@import "../../styles/fonts";
+
+.button {
+  padding: 20px 18px;
+	border: none;
+  width: max-content;
+}
+
+.orange {
+  background-color: var(--dark-orange-color);
+  color: var(--white-color);
+  transition: 0.2s;
+
+  &:hover {
+    background-color: var(--orange-hovered-color);
+  }
+}

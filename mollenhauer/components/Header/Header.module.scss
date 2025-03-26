@@ -1,0 +1,63 @@
+@import "../../styles/media";
+@import "../../styles/fonts";
+
+.header {
+  display: flex;
+  position: fixed;
+  justify-content: space-between;
+  padding-top: 8px;
+  align-items: flex-end;
+  width: 100%;
+  padding: 0 16px;
+
+  @include tablet {
+    padding: 8 0 0 44px;
+    align-items: center;
+  }
+
+  @include desktop {
+    padding: 56px 0 0 81px;
+  }
+
+  .langWrap {
+    display: none;
+
+    @include tablet {
+      margin-right: 2px;
+      flex-grow: 1;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    @include desktop {
+      flex-grow: 0;
+      margin-right: 0;
+      margin-left: 16px;
+    }
+  }
+
+  .button {
+    display: none;
+
+    @include desktop {
+      display: block;
+    }
+  }
+
+  .menuWrap {
+    display: none;
+
+    @include desktop {
+      display: flex;
+      flex-grow: 1;
+      justify-content: center;
+    }
+
+    .list {
+      display: flex;
+      gap: 32px;
+      color: var(--white-color);
+      @include fontS15W400;
+    }
+  }
+}

@@ -1,0 +1,34 @@
+@import "../../styles/fonts";
+
+.wrap {
+  padding: 18px 19px 20px 15px;
+  width: 170px;
+  height: 56px;
+  background-color: var(--white-color);
+
+  .list {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    li:hover {
+      cursor: pointer;
+    }
+
+    .flag {
+      border-radius: 50%;
+    }
+
+    .lang {
+      color: var(--blue-color);
+      opacity: 40%;
+      @include fontS15W400;
+      padding: 6px;
+    }
+
+    .active {
+      opacity: 100%;
+      text-decoration: underline;
+    }
+  }
+}
