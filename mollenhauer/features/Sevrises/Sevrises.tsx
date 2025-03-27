@@ -1,4 +1,5 @@
 import { FC, ReactNode } from "react";
+import cn from "classnames";
 
 import { H2 } from "@/components/H2/H2";
 
@@ -21,8 +22,8 @@ export const Sevrises: FC = (): ReactNode => {
         </p>
       </div>
       <ul className={s.list}>
-        {servisesList.map((item) => (
-          <li key={item}>
+        {servisesList.map((item, idx) => (
+          <li key={item} className={cn({ [s.offset]: idx % 2 !== 0 })}>
             <SevriseCard title={item} />
           </li>
         ))}
