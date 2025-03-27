@@ -1,8 +1,9 @@
 import { Hero } from "@/features/Hero/Hero";
+import { Sevrises } from "@/features/Sevrises/Sevrises";
 
 export default function Home() {
   return <main>
     <Hero />
-    <div style={{height: '1000px'}}></div>
+    <Sevrises />
   </main>;
 }

@@ -45,3 +45,12 @@ export const docsList: Menu = [
     link: "/",
   },
 ];
+
+export const servisesList = [
+  "Service and Support",
+  "Preparation of contract award",
+  "Structural design and execution planning",
+  "Project consulting",
+  "Construction site consulting",
+  "Location analysis and feasibility studies",
+];

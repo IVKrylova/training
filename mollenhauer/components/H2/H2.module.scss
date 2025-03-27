@@ -1,0 +1,7 @@
+@import "../../styles/fonts";
+
+.title {
+  @include fontS30W700;
+  color: var(--white-color);
+  letter-spacing: -2px;
+}
