@@ -12,10 +12,10 @@
     padding: 205px 0 327px 44px;
   }
 
-	@include desktop {
-		background-image: url(../../public/bgDesktop.png);
+  @include desktop {
+    background-image: url(../../public/bgDesktop.png);
     padding: 279px 0 350px 170px;
-	}
+  }
 
   .title {
     letter-spacing: -3px;
@@ -30,7 +30,10 @@
     @include fontS18W400;
     max-width: 264px;
     color: var(--white-color);
-    max-width: 380px;
+
+    @include tablet {
+      max-width: 380px;
+    }
 
     &:first-of-type {
       margin-top: 24px;
@@ -76,11 +79,11 @@
       width: 390px;
     }
 
-		@include desktop {
+    @include desktop {
       background-image: url(../../public/desktopAdv.png);
-			top: 145px;
-			height: 675px;
-			width: 740px;
+      top: 145px;
+      height: 675px;
+      width: 740px;
     }
   }
 }

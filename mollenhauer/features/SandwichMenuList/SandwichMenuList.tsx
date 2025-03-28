@@ -7,7 +7,7 @@ import { Language } from "@/features/Language/Language";
 
 import s from "./SandwichMenuList.module.scss";
 
-import { menu, docsList } from "@/shared/mocks/menuList";
+import { menu, docsList } from "@/shared/mocks/content";
 import { Button } from "@/components/Button/Button";
 
 interface SandwichMenuList {

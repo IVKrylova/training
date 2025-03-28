@@ -1,0 +1,68 @@
+@import "../../styles/fonts";
+
+.section {
+  padding-bottom: 600px;
+  position: relative;
+
+  &::after {
+    content: "";
+    background-image: url(../../public/serviseBgMobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 1530px;
+    display: block;
+    width: 100%;
+    top: 65px;
+    right: 0;
+    z-index: 1;
+    position: absolute;
+  }
+}
+
+.description {
+  background-color: var(--blue-color);
+  color: var(--white-color);
+}
+
+.title {
+  padding: 44px 67px 24px 16px;
+  max-width: 365px;
+}
+
+.text {
+  @include fontS15W400;
+  color: var(--white-color);
+  padding: 0 120px 290px 16px;
+  max-width: 370px;
+}
+
+.list {
+  z-index: 10;
+  position: relative;
+  margin-left: 176px;
+  margin-top: -316px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  li:not(:first-of-type) {
+    margin-top: -52px;
+  }
+}
+
+.offset {
+  margin-left: -125px;
+}
+
+.scrollBlock {
+  position: relative;
+  z-index: 10;
+  margin: 81px auto 0;
+  max-width: 221px;
+  text-align: center;
+  color: var( --grey-text-color);
+  @include fontS18W600;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
