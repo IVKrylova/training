@@ -26,6 +26,11 @@
   font-weight: 400;
 }
 
+@mixin fontS18W600 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
 // size 20
 @mixin fontS20W900 {
   font-size: 20px;
