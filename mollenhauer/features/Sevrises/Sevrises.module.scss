@@ -1,4 +1,5 @@
 @import "../../styles/fonts";
+@import "../../styles/media";
 
 .section {
   padding-bottom: 600px;
@@ -16,6 +17,12 @@
     right: 0;
     z-index: 1;
     position: absolute;
+
+    @include tablet {
+      background-image: url(../../public/servisesBgTablet.png);
+      top: -466px;
+      height: 1886px;
+    }
   }
 }
 
@@ -39,7 +46,7 @@
 .list {
   z-index: 10;
   position: relative;
-  margin-left: 176px;
+  margin-left: 45%;
   margin-top: -316px;
   display: flex;
   flex-direction: column;
