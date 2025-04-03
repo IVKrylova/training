@@ -1,0 +1,42 @@
+@import "../../styles/fonts";
+@import "../../styles/media";
+
+.section {
+  padding: 0 16px;
+  margin-top: -508px;
+  z-index: 100;
+  position: relative;
+
+  .title {
+    @include fontS28W700;
+    color: var(--black-color);
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  .text {
+    @include fontS16W400;
+    color: var(--grey-text-color);
+    text-align: center;
+  }
+
+  .swiperWrap {
+    padding: 24px 0 0 0;
+    position: absolute;
+    width: 100%;
+  }
+
+  .bullet {
+    width: 9px;
+    height: 9px;
+    background: var(--bullet-color);
+    opacity: 1;
+    display: inline-block;
+    border-radius: 50%;
+    margin: 0 4px;
+  }
+
+  .activeBullet {
+    background: var(--orange-color);
+  }
+}

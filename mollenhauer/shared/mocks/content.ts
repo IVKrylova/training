@@ -1,4 +1,4 @@
-import { Menu } from "../types/menu";
+import { Menu, ExpertiseListType } from "../types/content";
 
 export const menu: Menu = [
   {
@@ -46,11 +46,23 @@ export const docsList: Menu = [
   },
 ];
 
-export const servisesList = [
+export const servisesList: string[] = [
   "Service and Support",
   "Preparation of contract award",
   "Structural design and execution planning",
   "Project consulting",
   "Construction site consulting",
   "Location analysis and feasibility studies",
+];
+
+export const ExpertiseList: ExpertiseListType = [
+  { id: "01", title: "Civil engineering" },
+  { id: "02", title: "Machine and building foundations" },
+  { id: "03", title: "Silo and slipform construction" },
+  {
+    id: "04",
+    title: "Assesments, building inspection, concrete maintenance and repair",
+  },
+  { id: "05", title: "International cement factory construction" },
+  { id: "06", title: "Construction in ongoing operations" },
 ];

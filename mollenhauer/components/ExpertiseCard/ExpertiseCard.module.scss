@@ -1,0 +1,73 @@
+@import "../../styles/fonts";
+
+.card {
+  width: 358px;
+  height: 641px;
+  border: solid 0.73px var(--grey-border-color);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+
+  .number {
+    margin-top: 34px;
+    margin-left: 22px;
+    color: var(--dark-orange-color);
+    @include fontS20W700;
+  }
+
+  .icon {
+    width: 21px;
+    height: 21px;
+    margin-left: 41px;
+  }
+
+  .title {
+    max-width: 150px;
+    margin-top: 290px;
+    margin-left: 22px;
+  }
+
+  &:hover {
+    background-image: url("../../public/expertiseHopverBg.png");
+    background-size: cover;
+    cursor: pointer;
+
+    .title {
+      color: var(--white-color);
+    }
+
+    .number {
+      color: var(--white-color);
+    }
+
+    .icon {
+      path {
+        fill: var(--white-color);
+      }
+    }
+  }
+}
+
+.bg01 {
+  background-image: url("../../public/expCardBottom1.png");
+}
+
+.bg02 {
+  background-image: url("../../public/expCardBottom2.png");
+}
+
+.bg03 {
+  background-image: url("../../public/expCardBottom3.png");
+}
+
+.bg04 {
+  background-image: url("../../public/expCardBottom4.png");
+}
+
+.bg05 {
+  background-image: url("../../public/expCardBottom5.png");
+}
+
+.bg06 {
+  background-image: url("../../public/expCardBottom6.png");
+}
