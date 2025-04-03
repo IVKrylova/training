@@ -23,6 +23,12 @@
       top: -466px;
       height: 1886px;
     }
+
+    @include desktop {
+      background-image: url(../../public/servisesBgDesktop.png);
+      top: -498px;
+      height: 2892px;
+    }
   }
 }
 
@@ -34,6 +40,18 @@
 .title {
   padding: 44px 67px 24px 16px;
   max-width: 365px;
+
+  @include tablet {
+    max-width: 458px;
+    padding-top: 60px;
+    padding-left: 108px;
+  }
+
+  @include desktop {
+    padding-top: 96px;
+    padding-left: 294px;
+    max-width: 646px;
+  }
 }
 
 .text {
@@ -41,6 +59,19 @@
   color: var(--white-color);
   padding: 0 120px 290px 16px;
   max-width: 370px;
+
+  @include tablet {
+    padding-left: 108px;
+    max-width: 450px;
+    padding-bottom: 390px;
+  }
+
+  @include desktop {
+    padding-left: 294px;
+    max-width: 450px;
+    max-width: 718px;
+    padding-bottom: 674px;
+  }
 }
 
 .list {
@@ -56,7 +87,12 @@
     width: 100%;
     margin-left: -36px;
     align-items: flex-end;
-    margin-top: -462px;
+    margin-top: -580px;
+  }
+
+  @include desktop {
+    margin-left: -346px;
+    margin-top: -864px;
   }
 
   li:not(:first-of-type) {
@@ -72,12 +108,22 @@
       margin-right: 128px;
       margin-top: -48px;
     }
+
+    @include desktop {
+      margin-right: 174px;
+      margin-top: -66px;
+    }
   }
 
   li:nth-child(3) {
     @include tablet {
       margin-top: -48px;
       margin-right: 256px;
+    }
+
+    @include desktop {
+      margin-top: -64px;
+      margin-right: 348px;
     }
   }
 
@@ -87,6 +133,11 @@
       right: 514px;
       bottom: 128px;
     }
+
+    @include desktop {
+      right: 694px;
+      bottom: 174px;
+    }
   }
 
   li:nth-child(5) {
@@ -95,12 +146,21 @@
       right: 0;
       bottom: 128px;
     }
+
+    @include desktop {
+      bottom: 176px;
+    }
   }
 
   li:nth-child(6) {
     @include tablet {
       margin-top: -48px;
       margin-right: 384px;
+    }
+
+    @include desktop {
+      margin-top: -64px;
+      margin-right: 520px;
     }
   }
 }
@@ -127,5 +187,9 @@
 
   @include tablet {
     margin-top: 210px;
+  }
+
+  @include desktop {
+    margin-top: 162px;
   }
 }
