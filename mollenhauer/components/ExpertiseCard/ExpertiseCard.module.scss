@@ -8,6 +8,8 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 0 100%;
+  display: flex;
+  flex-direction: column;
 
   @include tablet {
     width: 210px;
@@ -30,6 +32,12 @@
       margin-left: 27px;
       @include fontS14W700;
     }
+
+    @include desktop {
+      margin-top: 55px;
+      margin-left: 37px;
+      @include fontS17W800;
+    }
   }
 
   .icon {
@@ -42,6 +50,12 @@
       height: 14px;
       margin-left: 43px;
     }
+
+    @include desktop {
+      width: 18px;
+      height: 18px;
+      margin-left: 58px;
+    }
   }
 
   .title {
@@ -52,6 +66,12 @@
     @include tablet {
       margin-top: 128px;
       @include fontS13W700;
+    }
+
+    @include desktop {
+      margin-top: 178px;
+      @include fontS17W800;
+      max-width: 248px;
     }
   }
 

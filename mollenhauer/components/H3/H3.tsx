@@ -9,5 +9,5 @@ interface H3 {
 }
 
 export const H3: FC<H3> = ({ text, className }): ReactNode => {
-  return <h2 className={cn(s.title, className)}>{text}</h2>;
+  return <h3 className={cn(s.title, className)}>{text}</h3>;
 };
