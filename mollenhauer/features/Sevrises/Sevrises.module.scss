@@ -52,13 +52,65 @@
   flex-direction: column;
   gap: 8px;
 
+  @include tablet {
+    width: 100%;
+    margin-left: -36px;
+    align-items: flex-end;
+    margin-top: -462px;
+  }
+
   li:not(:first-of-type) {
     margin-top: -52px;
+
+    @include tablet {
+      margin-top: 0;
+    }
+  }
+
+  li:nth-child(2) {
+    @include tablet {
+      margin-right: 128px;
+      margin-top: -48px;
+    }
+  }
+
+  li:nth-child(3) {
+    @include tablet {
+      margin-top: -48px;
+      margin-right: 256px;
+    }
+  }
+
+  li:nth-child(4) {
+    @include tablet {
+      position: absolute;
+      right: 514px;
+      bottom: 128px;
+    }
+  }
+
+  li:nth-child(5) {
+    @include tablet {
+      position: absolute;
+      right: 0;
+      bottom: 128px;
+    }
+  }
+
+  li:nth-child(6) {
+    @include tablet {
+      margin-top: -48px;
+      margin-right: 384px;
+    }
   }
 }
 
 .offset {
   margin-left: -125px;
+
+  @include tablet {
+    margin-left: 0;
+  }
 }
 
 .scrollBlock {
@@ -67,9 +119,13 @@
   margin: 81px auto 0;
   max-width: 221px;
   text-align: center;
-  color: var( --grey-text-color);
+  color: var(--grey-text-color);
   @include fontS18W600;
   display: flex;
   flex-direction: column;
   gap: 20px;
+
+  @include tablet {
+    margin-top: 210px;
+  }
 }
