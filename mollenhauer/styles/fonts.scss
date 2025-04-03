@@ -1,3 +1,15 @@
+// size 13
+@mixin fontS13W700 {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+// size 14
+@mixin fontS14W700 {
+  font-size: 14px;
+  font-weight: 700;
+}
+
 // size 15
 @mixin fontS15W400 {
   font-size: 15px;
@@ -20,6 +32,12 @@
   font-weight: 400;
 }
 
+// size 17
+@mixin fontS17W800 {
+  font-size: 18px;
+  font-weight: 800;
+}
+
 // size 18
 @mixin fontS18W400 {
   font-size: 18px;
@@ -37,10 +55,27 @@
   font-weight: 900;
 }
 
+@mixin fontS20W700 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+// size 24
+@mixin fontS24W700 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
 // size 26
 @mixin fontS26W300 {
   font-size: 26px;
   font-weight: 300;
+}
+
+// size 28
+@mixin fontS28W700 {
+  font-size: 28px;
+  font-weight: 700;
 }
 
 // size 30
@@ -53,4 +88,10 @@
 @mixin fontS38W400 {
   font-size: 38px;
   font-weight: 400;
+}
+
+// size 40
+@mixin fontS40W700 {
+  font-size: 40px;
+  font-weight: 700;
 }

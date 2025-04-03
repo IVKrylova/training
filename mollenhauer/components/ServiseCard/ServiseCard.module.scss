@@ -4,7 +4,6 @@
 .card {
   display: flex;
   align-items: center;
-  // justify-content: center;
   flex-direction: column;
   gap: 8px;
   @include fontS15W700;
@@ -14,8 +13,8 @@
   text-align: center;
 
   @include desktop {
-    width: 230px;
-    height: 230px;
+    width: 264px;
+    height: 264px;
   }
 
   &::before {
@@ -36,7 +35,7 @@
     letter-spacing: -1px;
 
     @include desktop {
-      padding-top: 108px;
+      padding-top: 124px;
     }
   }
 }

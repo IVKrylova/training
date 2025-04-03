@@ -10,7 +10,11 @@
   --ligth-text-color: #f7f7f7;
   --grey-color: #abb5c7;
   --light-grey-color: #d5d5d5;
-  --grey-text-color: #53565A;
+  --grey-text-color: #53565a;
+  --black-color: #000000;
+  --grey-text-color: #737b7d;
+  --grey-border-color: #e2e2e2;
+  --bullet-color: #d9d9d9;
 }
 
 html,
@@ -40,4 +44,8 @@ a {
 
 ul {
   list-style-type: none;
+}
+
+.swiper-wrapper {
+  justify-content: center;
 }
