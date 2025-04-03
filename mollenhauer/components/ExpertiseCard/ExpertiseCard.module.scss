@@ -14,6 +14,11 @@
     height: 355px;
   }
 
+  @include desktop {
+    width: 288px;
+    height: 488px;
+  }
+
   .number {
     margin-top: 34px;
     margin-left: 22px;
@@ -44,9 +49,9 @@
     margin-top: 290px;
     margin-left: 22px;
 
-		@include tablet {
+    @include tablet {
       margin-top: 128px;
-			@include fontS13W700;
+      @include fontS13W700;
     }
   }
 

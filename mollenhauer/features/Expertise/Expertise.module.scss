@@ -12,6 +12,11 @@
     padding: 0;
   }
 
+  @include desktop {
+    margin-top: -492px;
+    @include fontS40W700;
+  }
+
   .title {
     @include fontS28W700;
     color: var(--black-color);
@@ -34,6 +39,10 @@
       max-width: 500px;
       margin: 0 auto;
     }
+
+    @include desktop {
+      @include fontS18W400;
+    }
   }
 
   .swiperWrap {
@@ -43,6 +52,10 @@
 
     @include tablet {
       padding: 46px 0 44px 0;
+    }
+
+    @include desktop {
+      padding: 51px 0 44px 0;
     }
 
     .pagination {
@@ -57,6 +70,10 @@
 
     @include tablet {
       width: 210px;
+    }
+
+    @include desktop {
+      width: 288px;
     }
   }
 
