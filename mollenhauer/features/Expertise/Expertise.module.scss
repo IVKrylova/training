@@ -7,23 +7,57 @@
   z-index: 100;
   position: relative;
 
+  @include tablet {
+    margin-top: -522px;
+    padding: 0;
+  }
+
   .title {
     @include fontS28W700;
     color: var(--black-color);
     text-align: center;
     margin-bottom: 24px;
+
+    @include tablet {
+      @include fontS30W700;
+      max-width: 400px;
+      margin: 0 auto 24px;
+    }
   }
 
   .text {
     @include fontS16W400;
     color: var(--grey-text-color);
     text-align: center;
+
+    @include tablet {
+      max-width: 500px;
+      margin: 0 auto;
+    }
   }
 
   .swiperWrap {
     padding: 24px 0 0 0;
     position: absolute;
     width: 100%;
+
+    @include tablet {
+      padding: 46px 0 44px 0;
+    }
+
+    .pagination {
+      @include tablet {
+        bottom: 0;
+      }
+    }
+  }
+
+  .slide {
+    width: 358px;
+
+    @include tablet {
+      width: 210px;
+    }
   }
 
   .bullet {

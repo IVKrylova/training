@@ -1,3 +1,15 @@
+// size 13
+@mixin fontS13W700 {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+// size 14
+@mixin fontS14W700 {
+  font-size: 14px;
+  font-weight: 700;
+}
+
 // size 15
 @mixin fontS15W400 {
   font-size: 15px;

@@ -27,16 +27,19 @@ export const Expertise: FC = (): ReactNode => {
       </p>
 
       <Swiper
+        slidesPerView="auto"
+        spaceBetween={0}
         pagination={{
           clickable: true,
-					bulletClass: s.bullet,
-					bulletActiveClass: s.activeBullet
+          bulletClass: s.bullet,
+          bulletActiveClass: s.activeBullet,
+					horizontalClass: s.pagination
         }}
         modules={[Pagination]}
         className={s.swiperWrap}
       >
         {ExpertiseList.map((el) => (
-          <SwiperSlide key={el.id}>
+          <SwiperSlide key={el.id} className={s.slide}>
             <ExpertiseCard {...el} />
           </SwiperSlide>
         ))}

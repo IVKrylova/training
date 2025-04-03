@@ -1,4 +1,5 @@
 @import "../../styles/fonts";
+@import "../../styles/media";
 
 .card {
   width: 358px;
@@ -8,23 +9,45 @@
   background-repeat: no-repeat;
   background-position: 0 100%;
 
+  @include tablet {
+    width: 210px;
+    height: 355px;
+  }
+
   .number {
     margin-top: 34px;
     margin-left: 22px;
     color: var(--dark-orange-color);
     @include fontS20W700;
+
+    @include tablet {
+      margin-top: 40px;
+      margin-left: 27px;
+      @include fontS14W700;
+    }
   }
 
   .icon {
     width: 21px;
     height: 21px;
     margin-left: 41px;
+
+    @include tablet {
+      width: 14px;
+      height: 14px;
+      margin-left: 43px;
+    }
   }
 
   .title {
     max-width: 150px;
     margin-top: 290px;
     margin-left: 22px;
+
+		@include tablet {
+      margin-top: 128px;
+			@include fontS13W700;
+    }
   }
 
   &:hover {
