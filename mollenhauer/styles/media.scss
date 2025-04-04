@@ -9,3 +9,9 @@
     @content;
   }
 }
+
+@mixin media1260 {
+  @media screen and (min-width: 1260px) {
+    @content;
+  }
+}

@@ -21,9 +21,17 @@ export const BenefitCard: FC<BenefitCard> = ({
 }): ReactNode => {
   return (
     <div className={s.card}>
-      <Image src={img} alt={`${id}-${title}`} width={358} height={213} />
-      <H3 text={title} className={s.title} />
-      <p className={s.text}>{text}</p>
+      <Image
+        src={img}
+        alt={`${id}-${title}`}
+        width={358}
+        height={213}
+        className={s.img}
+      />
+      <div className={s.description}>
+        <H3 text={title} className={s.title} />
+        <p className={s.text}>{text}</p>
+      </div>
     </div>
   );
 };

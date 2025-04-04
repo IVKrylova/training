@@ -54,6 +54,12 @@
       padding: 46px 0 44px 0;
     }
 
+    @include media1260 {
+      div[class*="swiper-wrapper"] {
+        justify-content: center;
+      }
+    }
+
     @include desktop {
       padding: 51px 0 44px 0;
     }
