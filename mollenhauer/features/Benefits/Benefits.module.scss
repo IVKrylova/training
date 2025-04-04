@@ -1,0 +1,131 @@
+@import "../../styles/fonts";
+@import "../../styles/media";
+
+.section {
+  padding: 0 16px;
+  margin-top: 778px;
+  margin-bottom: 32px;
+
+  @include tablet {
+    margin-top: 566px;
+    margin-bottom: 94px;
+    padding: 0 44px;
+  }
+
+  @include desktop {
+    margin-top: 706px;
+    margin-bottom: 184px;
+    padding: 0 144px;
+    z-index: 10;
+    position: relative;
+  }
+
+  .description {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+
+    @include tablet {
+      flex-wrap: nowrap;
+      margin-bottom: 56px;
+    }
+
+    @include desktop {
+      gap: 96px;
+      margin-bottom: 88px;
+    }
+
+    .title {
+      color: var(--black-color);
+      @include fontS28W700;
+      max-width: 274px;
+
+      @include tablet {
+        min-width: 234px;
+      }
+
+      @include desktop {
+        @include fontS40W700;
+        min-width: 414px;
+      }
+    }
+
+    .text {
+      @include fontS16W400;
+      color: var(--grey-text-color);
+      max-width: 304px;
+
+      @include tablet {
+        max-width: 100%;
+        column-count: 2;
+        column-gap: 15px;
+      }
+
+      @include desktop {
+        column-gap: 24px;
+      }
+    }
+  }
+
+  .slider {
+    position: relative;
+  }
+
+  .navigation {
+    display: none;
+
+    @include tablet {
+      display: block;
+			height: 133.5px;;
+    }
+  }
+
+  .prevNextNavigation {
+    display: none;
+
+    @include desktop {
+      display: block;
+      position: absolute;
+      top: 133.5px;
+      z-index: 10;
+      left: 935px;
+    }
+  }
+
+  .swiperWrap {
+    position: absolute;
+    padding-bottom: 65px;
+    width: 100%;
+
+    @include tablet {
+      padding-bottom: 0;
+    }
+
+    .slide {
+      width: 358px;
+    }
+
+    .bullet {
+      width: 9px;
+      height: 9px;
+      background: var(--bullet-color);
+      opacity: 1;
+      display: inline-block;
+      border-radius: 50%;
+      margin: 0 4px;
+    }
+
+    .activeBullet {
+      background: var(--orange-color);
+    }
+
+    .pagination {
+      bottom: 0;
+
+      @include tablet {
+        display: none;
+      }
+    }
+  }
+}

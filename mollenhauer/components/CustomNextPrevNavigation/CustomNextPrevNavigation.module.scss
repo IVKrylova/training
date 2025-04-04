@@ -1,0 +1,25 @@
+.navigation {
+  .button {
+    border: none;
+    width: 71.5px;
+    height: 71.5px;
+    cursor: pointer;
+  }
+
+  .prev {
+    background-color: var(--blue-color);
+  }
+
+  .next {
+    background-color: var(--dark-orange-color);
+  }
+
+	.icon {
+		width: 8px;
+		height: 14px;
+	}
+
+	.nextIcon {
+		rotate: 180deg;
+	}
+}

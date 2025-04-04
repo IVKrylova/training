@@ -1,0 +1,82 @@
+@import "../../styles/fonts";
+@import "../../styles/media";
+
+.navigation {
+  width: 100%;
+  padding: 12px 16px 0 26px;
+  background-color: var(--white-color);
+
+  @include desktop {
+    position: absolute;
+    width: 1007px;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    padding: 17px 34px 6px 60px;
+    @include fontS20W600;
+    // height: 124.5px;
+  }
+
+  .list {
+    display: flex;
+
+    .item {
+      color: var(--grey-color-nav);
+      padding: 0 18px;
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      position: relative;
+
+      &:not(:last-child)::after {
+        height: 95%;
+        border-image: url(../../public/border.svg) 0 fill;
+        content: "";
+        top: 0;
+        right: 0;
+        width: 1px;
+        position: absolute;
+      }
+
+      .id {
+        @include fontS14W700;
+
+        @include desktop {
+          @include fontS17W700;
+        }
+      }
+
+      .icon {
+        width: 14px;
+        height: 14px;
+        margin-left: 13px;
+
+        path {
+          fill: var(--grey-color-nav);
+        }
+
+        @include desktop {
+          width: 18px;
+          height: 18px;
+					margin-left: 21px;
+        }
+      }
+
+      .title {
+        @include fontS16W600;
+        letter-spacing: -0.74px;
+        margin-top: 16px;
+      }
+    }
+
+    .active {
+      color: var(--main-color);
+
+      .icon {
+        path {
+          fill: var(--main-color);
+        }
+      }
+    }
+  }
+}

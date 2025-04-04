@@ -1,0 +1,76 @@
+@import "../../styles/fonts";
+@import "../../styles/media";
+
+.card {
+  width: 358px;
+  display: flex;
+  flex-direction: column;
+
+  @include tablet {
+    width: 746px;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+	@include tablet {
+    width: 100%;
+  }
+
+  .img {
+    @include tablet {
+      width: 452px;
+      height: 268px;
+    }
+
+		@include desktop {
+			width: 936px;
+      height: 557px;
+		}
+  }
+
+  .description {
+    margin-top: 32px;
+
+		@include desktop {
+			margin-top: 222.5px;
+		}
+  }
+
+  .title {
+    margin-top: 11px;
+    margin-bottom: 16px;
+    color: var(--black-color);
+    @include fontS24W700;
+    letter-spacing: -1px;
+
+    @include tablet {
+      margin-top: 0;
+      max-width: 236px;
+      letter-spacing: -1.5px;
+    }
+
+		@include desktop {
+			max-width: 393px;
+			@include fontS28W700;
+		}
+  }
+
+  .text {
+    @include fontS14W400;
+    color: var(--grey-text-color);
+    max-width: 314px;
+    line-height: 1.4;
+
+    @include tablet {
+      max-width: 236px;
+      line-height: 1.4;
+      letter-spacing: -0.5px;
+    }
+
+		@include desktop {
+			@include fontS16W400;
+			max-width: 331px;
+			letter-spacing: .3px;
+		}
+  }
+}
