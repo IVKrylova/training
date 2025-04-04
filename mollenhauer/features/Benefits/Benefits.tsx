@@ -8,6 +8,7 @@ import { Swiper as SwiperType } from "swiper/types";
 import { BenefitCard } from "@/components/BenefitCard/BenefitCard";
 import { H2 } from "@/components/H2/H2";
 import { CustomNavigation } from "@/components/CustomNavigation/CustomNavigation";
+import { CustomNextPrevNavigation } from "@/components/CustomNextPrevNavigation/CustomNextPrevNavigation";
 
 import { BenefitList } from "@/shared/mocks/content";
 
@@ -36,40 +37,47 @@ export const Benefits: FC = (): ReactNode => {
           efficient.
         </p>
       </div>
-      <CustomNavigation
-        list={BenefitList}
-        className={s.navigation}
-        swiperRef={swiperRef}
-        active={active}
-        setActive={setActive}
-      />
-      <Swiper
-        slidesPerView="auto"
-        spaceBetween={16}
-				loop
-        breakpoints={{
-          768: {
-            slidesPerView: 1,
-            spaceBetween: 0,
-						loop: false
-          },
-        }}
-        onSwiper={(swiper: SwiperType) => (swiperRef.current = swiper)}
-        pagination={{
-          clickable: true,
-          bulletClass: s.bullet,
-          bulletActiveClass: s.activeBullet,
-          horizontalClass: s.pagination,
-        }}
-        modules={[Pagination]}
-        className={s.swiperWrap}
-      >
-        {BenefitList.map((el) => (
-          <SwiperSlide key={el.id} className={s.slide}>
-            <BenefitCard {...el} />
-          </SwiperSlide>
-        ))}
-      </Swiper>
+      <div className={s.slider}>
+        <CustomNavigation
+          list={BenefitList}
+          className={s.navigation}
+          swiperRef={swiperRef}
+          active={active}
+          setActive={setActive}
+        />
+        <CustomNextPrevNavigation
+          className={s.prevNextNavigation}
+          setActive={setActive}
+          swiperRef={swiperRef}
+        />
+        <Swiper
+          slidesPerView="auto"
+          spaceBetween={16}
+          loop
+          breakpoints={{
+            768: {
+              slidesPerView: 1,
+              spaceBetween: 0,
+              loop: false,
+            },
+          }}
+          onSwiper={(swiper: SwiperType) => (swiperRef.current = swiper)}
+          pagination={{
+            clickable: true,
+            bulletClass: s.bullet,
+            bulletActiveClass: s.activeBullet,
+            horizontalClass: s.pagination,
+          }}
+          modules={[Pagination]}
+          className={s.swiperWrap}
+        >
+          {BenefitList.map((el) => (
+            <SwiperSlide key={el.id} className={s.slide}>
+              <BenefitCard {...el} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
     </section>
   );
 };

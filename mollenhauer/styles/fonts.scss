@@ -43,6 +43,11 @@
 }
 
 // size 17
+@mixin fontS17W700 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
 @mixin fontS17W800 {
   font-size: 18px;
   font-weight: 800;
@@ -63,6 +68,11 @@
 @mixin fontS20W900 {
   font-size: 20px;
   font-weight: 900;
+}
+
+@mixin fontS20W600 {
+  font-size: 20px;
+  font-weight: 600;
 }
 
 @mixin fontS20W700 {
