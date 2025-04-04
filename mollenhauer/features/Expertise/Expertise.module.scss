@@ -1,5 +1,6 @@
 @import "../../styles/fonts";
 @import "../../styles/media";
+@import "../../styles//pagination";
 
 .section {
   padding: 0 16px;
@@ -84,16 +85,10 @@
   }
 
   .bullet {
-    width: 9px;
-    height: 9px;
-    background: var(--bullet-color);
-    opacity: 1;
-    display: inline-block;
-    border-radius: 50%;
-    margin: 0 4px;
+    @include bullet;
   }
 
   .activeBullet {
-    background: var(--orange-color);
+    @include activeBullet;
   }
 }
