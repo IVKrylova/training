@@ -1,0 +1,55 @@
+@import "../../styles/fonts";
+@import "../../styles/media";
+
+.section {
+  padding: 0 16px;
+  margin-top: 778px;
+  margin-bottom: 32px;
+
+  .description {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+
+    .title {
+      color: var(--black-color);
+      @include fontS28W700;
+      max-width: 274px;
+    }
+
+    .text {
+      @include fontS16W400;
+      color: var(--grey-text-color);
+      max-width: 304px;
+    }
+  }
+
+  .swiperWrap {
+    position: absolute;
+		padding-bottom: 65px;
+		width: 100%;
+
+    .slide {
+      width: 358px;
+    }
+
+    .bullet {
+      width: 9px;
+      height: 9px;
+      background: var(--bullet-color);
+      opacity: 1;
+      display: inline-block;
+      border-radius: 50%;
+      margin: 0 4px;
+    }
+
+    .activeBullet {
+      background: var(--orange-color);
+    }
+
+    .pagination {
+      bottom: 0;
+    }
+  }
+}

@@ -10,6 +10,11 @@
   font-weight: 700;
 }
 
+@mixin fontS14W400 {
+  font-size: 14px;
+  font-weight: 400;
+}
+
 // size 15
 @mixin fontS15W400 {
   font-size: 15px;

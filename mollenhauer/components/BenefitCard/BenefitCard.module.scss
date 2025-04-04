@@ -1,0 +1,23 @@
+@import "../../styles/fonts";
+@import "../../styles/media";
+
+.card {
+  width: 358px;
+  display: flex;
+  flex-direction: column;
+
+  .title {
+    margin-top: 11px;
+    margin-bottom: 16px;
+    color: var(--black-color);
+    @include fontS24W700;
+    letter-spacing: -1px;
+  }
+
+  .text {
+    @include fontS14W400;
+    color: var(--grey-text-color);
+		max-width: 314px;
+		line-height: 1.4;
+  }
+}

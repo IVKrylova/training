@@ -1,3 +1,5 @@
+import { StaticImageData } from "next/image";
+
 export type MenuItem = {
   id: number;
   text: string;
@@ -12,3 +14,12 @@ export type ExpertiseItemType = {
 };
 
 export type ExpertiseListType = ExpertiseItemType[];
+
+export type BenefitItemType = {
+  id: string;
+  title: string;
+  text: string;
+  img: StaticImageData;
+};
+
+export type BenefitListType = BenefitItemType[];

@@ -46,6 +46,8 @@ ul {
   list-style-type: none;
 }
 
-.swiper-wrapper {
-  justify-content: center;
+@media screen and (min-width: 1260px) {
+  .swiper-wrapper {
+    justify-content: center;
+  }
 }
