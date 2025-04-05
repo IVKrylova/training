@@ -1,6 +1,7 @@
 @import "../../styles/fonts";
 @import "../../styles/media";
-@import "../../styles//pagination";
+@import "../../styles/pagination";
+@import "../../styles/graphics";
 
 .section {
   margin-top: 608px;
@@ -11,12 +12,32 @@
     @include fontS24W700;
     color: var(--black-color);
     max-width: 300px;
+    margin-bottom: 56px;
   }
 
   .swiperWrap {
     position: absolute;
     width: 100%;
-		padding-bottom: 92px;
+    padding-bottom: 92px;
+
+    div[class*="swiper-slide"]::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 0.5px;
+      height: 100%;
+      @include borderVertical;
+    }
+
+    div[class*="swiper-slide"]:not(:nth-child(7)):not(:nth-child(8)):not(
+        :nth-child(9)
+      ):not(:nth-child(16)):not(:nth-child(17)):not(:nth-child(18)):not(
+        :nth-child(25)
+      ):not(:nth-child(26)):not(:nth-child(27))::before {
+      @include partnersBorderBottom;
+      @include borderHorizontal;
+    }
   }
 
   .bullet {
@@ -27,7 +48,7 @@
     @include activeBullet;
   }
 
-	s.pagination {
-		bottom: 0;
-	}
+  s.pagination {
+    bottom: 0;
+  }
 }
