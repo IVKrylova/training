@@ -6,4 +6,9 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+
+	@include tablet {
+		width: 223px;
+		height: 128px;
+	}
 }

@@ -12,7 +12,7 @@ import { PartnerList } from "@/shared/mocks/content";
 import s from "./Partners.module.scss";
 import "swiper/scss";
 import "swiper/scss/pagination";
-import 'swiper/css/grid';
+import "swiper/css/grid";
 
 export const Partners: FC = (): ReactNode => {
   return (
@@ -26,9 +26,9 @@ export const Partners: FC = (): ReactNode => {
         slidesPerView={3}
         grid={{
           rows: 3,
-					fill: 'row',
+          fill: "row",
         }}
-				spaceBetween={0}
+        spaceBetween={0}
         pagination={{
           clickable: true,
           bulletClass: s.bullet,
@@ -37,8 +37,15 @@ export const Partners: FC = (): ReactNode => {
         }}
         modules={[Pagination, Grid]}
         className={s.swiperWrap}
-				slidesPerGroup={3}
-				loop
+        slidesPerGroup={3}
+        loop
+        breakpoints={{
+          768: {
+            grid: {
+              rows: 1,
+            },
+          },
+        }}
       >
         {PartnerList.map((el) => (
           <SwiperSlide key={el.id} className={s.slide}>
