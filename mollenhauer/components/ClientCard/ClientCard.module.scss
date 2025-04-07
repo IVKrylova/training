@@ -10,6 +10,11 @@
   border-bottom: 24px solid var(--orange-color);
   position: relative;
 
+	@include tablet {
+		width: 427px;
+		padding: 65px 0 27px 55px;
+	}
+
   &::after {
     content: "";
     position: absolute;
@@ -37,6 +42,11 @@
     color: var(--grey-color-icon);
     margin-top: 24px;
 
+		@include tablet {
+			margin-top: 30px;
+			min-width: 426px;
+		}
+
     &::before {
       content: "";
       position: absolute;
@@ -52,11 +62,19 @@
     margin-top: 12px;
     color: var(--main-color);
     @include fontS15W800;
+
+		@include tablet {
+			margin-top: 66px;
+		}
   }
 
   .job {
     margin-top: 10px;
     color: var(--orange-color);
     @include fontS12W600;
+
+		@include tablet {
+			margin-top: 12px;
+		}
   }
 }

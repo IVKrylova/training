@@ -7,25 +7,52 @@
   padding: 0 16px;
   position: relative;
 
+  @include tablet {
+    margin-top: 320px;
+		padding: 0 44px;
+  }
+
+  .description {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    @include tablet {
+      max-width: 228px;
+    }
+  }
+
   .title {
     color: var(--black-color);
     @include fontS26W600;
   }
 
   .text {
-    margin-top: 24px;
     color: var(--grey-text-color);
     @include fontS13W400;
   }
 
   .swiperWrap {
-    position: absolute;
     margin-top: 32px;
-		width: 100%;
-		padding-bottom: 33px;
+    position: absolute;
+    width: 100%;
+    padding-bottom: 33px;
+
+    @include tablet {
+      top: 0;
+      padding-left: 222px;
+      margin-top: 0;
+      padding-bottom: 0;
+    }
 
     .pagination {
-			bottom: 0;
+      bottom: 0;
+
+			@include tablet {
+				width: auto;
+				// 153px is width of pagination
+				left: calc(222px - 153px - 16px);
+			}
     }
 
     .bullet {

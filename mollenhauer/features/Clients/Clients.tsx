@@ -16,15 +16,16 @@ import "swiper/scss/pagination";
 export const Clients: FC = (): ReactNode => {
   return (
     <section className={s.section}>
-      <H2 text="What clients say." className={s.title} />
-      <p className={s.text}>
-        Aenean mauris duis sed congue magna scelerisque dolor eget in. Euismod
-        eros, in cursus aliquam.
-      </p>
+      <div className={s.description}>
+        <H2 text="What clients say." className={s.title} />
+        <p className={s.text}>
+          Aenean mauris duis sed congue magna scelerisque dolor eget in. Euismod
+          eros, in cursus aliquam.
+        </p>
+      </div>
 
       <Swiper
         slidesPerView={1}
-        spaceBetween={16}
         loop
         pagination={{
           clickable: true,
@@ -34,6 +35,11 @@ export const Clients: FC = (): ReactNode => {
         }}
         modules={[Pagination]}
         className={s.swiperWrap}
+				breakpoints={{
+					768: {
+						spaceBetween: 232
+					}
+				}}
       >
         {ClientsList.map((el) => (
           <SwiperSlide key={el.id} className={s.slide}>
