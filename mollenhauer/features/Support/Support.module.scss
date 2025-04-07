@@ -6,7 +6,11 @@
   margin-top: 548px;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+
+	@include tablet {
+		padding: 0 44px;
+		margin-top: 444px;
+	}
 
   .title {
     @include fontS16W400;
@@ -19,6 +23,12 @@
     display: flex;
     flex-direction: column;
     gap: 40px;
+		margin-bottom: 40px;
+
+		@include tablet {
+			flex-direction: row;
+			margin-bottom: 60px;
+		}
 
     .thesis {
       @include fontS30W400;
@@ -26,10 +36,20 @@
       color: var(--dark-orange-color);
       max-width: 358px;
 
+			.subtitle {
+				@include tablet {
+					max-width: 258px;
+				}
+			}
+
       .icon {
         width: 35px;
         height: auto;
         margin-top: 38px;
+
+				@include tablet {
+					margin-top: 43px;
+				}
       }
     }
 
@@ -40,6 +60,10 @@
       gap: 18px;
       color: var(--black-text-color);
       max-width: 338px;
+
+			@include tablet {
+				max-width: 426px;
+			}
     }
   }
 
@@ -48,9 +72,18 @@
     flex-direction: column;
     gap: 40px;
 
+		@include tablet {
+			flex-direction: row;
+			gap: 18px;
+		}
+
     .itemTitle {
       @include fontS26W700;
       color: var(--black-color);
+
+			@include tablet {
+				max-width: 200px;
+			} 
     }
 
     .itemText {

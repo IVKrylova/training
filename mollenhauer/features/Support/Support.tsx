@@ -13,7 +13,7 @@ export const Support: FC = (): ReactNode => {
       <H2 className={s.title} text="Holistic. Agile. Reliable"></H2>
       <div className={s.description}>
         <div className={s.thesis}>
-          <p>
+          <p className={s.subtitle}>
             With this triad we line up to support you to realize your projects
             successfully.
           </p>
