@@ -80,6 +80,12 @@
   font-weight: 600;
 }
 
+// size 19
+@mixin fontS19W400 {
+  font-size: 19px;
+  font-weight: 400;
+}
+
 // size 20
 @mixin fontS20W900 {
   font-size: 20px;
@@ -124,6 +130,13 @@
   font-size: 30px;
   font-weight: 700;
 }
+
+// size 32
+@mixin fontS32W600 {
+  font-size: 32px;
+  font-weight: 600;
+}
+
 
 // size 38
 @mixin fontS38W400 {

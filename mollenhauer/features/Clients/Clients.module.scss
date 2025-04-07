@@ -1,6 +1,7 @@
 @import "../../styles/fonts";
 @import "../../styles/media";
 @import "../../styles/pagination";
+@import "../../styles/graphics";
 
 .section {
   margin-top: 516px;
@@ -9,7 +10,12 @@
 
   @include tablet {
     margin-top: 320px;
-		padding: 0 44px;
+    padding: 0 44px;
+  }
+
+  @include desktop {
+    padding: 0 144px;
+    margin-top: 238px;
   }
 
   .description {
@@ -20,16 +26,28 @@
     @include tablet {
       max-width: 228px;
     }
+
+    @include desktop {
+      max-width: 248px;
+    }
   }
 
   .title {
     color: var(--black-color);
     @include fontS26W600;
+
+    @include desktop {
+      @include fontS32W600;
+    }
   }
 
   .text {
     color: var(--grey-text-color);
     @include fontS13W400;
+
+    @include desktop {
+      @include fontS16W400;
+    }
   }
 
   .swiperWrap {
@@ -45,14 +63,39 @@
       padding-bottom: 0;
     }
 
+    @include desktop {
+      padding-left: 432px;
+    }
+
+    .slide {
+      position: relative;
+
+      &::after {
+        @include desktop {
+          position: absolute;
+          @include borderVertical;
+          content: "";
+          top: 0;
+          right: calc(432px - 144px);
+          height: 100%;
+          width: 1px;
+        }
+      }
+    }
+
     .pagination {
       bottom: 0;
 
-			@include tablet {
-				width: auto;
-				// 153px is width of pagination
-				left: calc(222px - 153px - 16px);
-			}
+      @include tablet {
+        width: auto;
+        // 153px is width of pagination
+        left: calc(222px - 153px - 16px);
+      }
+
+      @include desktop {
+        // 153px is width of pagination
+        left: calc(432px - 153px - 73px);
+      }
     }
 
     .bullet {
@@ -61,6 +104,13 @@
 
     .activeBullet {
       @include activeBullet;
+    }
+
+    .prevNextNavigation {
+      position: absolute;
+      z-index: 100;
+      bottom: 0;
+			left: 1080px;
     }
   }
 }
