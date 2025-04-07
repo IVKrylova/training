@@ -26,6 +26,17 @@
     }
   }
 
+  @include desktop {
+    margin-top: 820px;
+    padding: 0 144px;
+
+    &::after {
+      background-image: url(../../public/bgPartnersDesktop.png);
+      top: -564px;
+      height: 3826px;
+    }
+  }
+
   .title {
     @include fontS24W700;
     color: var(--black-color);
@@ -35,6 +46,14 @@
     @include tablet {
       margin-bottom: 32px;
     }
+
+    @include desktop {
+      margin-bottom: 11px;
+    }
+  }
+
+  .slider {
+    position: relative;
   }
 
   .swiperWrap {
@@ -56,6 +75,22 @@
       @include borderVertical;
     }
 
+    div[class*="swiper-slide"]:nth-child(3n)::after {
+      @include tablet {
+        display: none;
+      }
+
+      @include desktop {
+        display: block;
+      }
+    }
+
+    div[class*="swiper-slide"]:nth-child(4n)::after {
+      @include desktop {
+        display: none;
+      }
+    }
+
     div[class*="swiper-slide"]:not(:nth-child(7)):not(:nth-child(8)):not(
         :nth-child(9)
       ):not(:nth-child(16)):not(:nth-child(17)):not(:nth-child(18)):not(
@@ -68,6 +103,23 @@
     div[class*="swiper-slide"]::before {
       display: none;
     }
+
+    div[class*="swiper-button-prev"],
+    div[class*="swiper-button-next"] {
+      display: none;
+
+      @include desktop {
+        --swiper-navigation-size: 14px;
+        display: flex;
+        top: calc(50% - 14px);
+        width: 7px;
+        color: var(--grey-color-icon);
+
+        &:hover {
+          color: var(--grey-color-hovered-icon);
+        }
+      }
+    }
   }
 
   .bullet {
@@ -78,7 +130,11 @@
     @include activeBullet;
   }
 
-  s.pagination {
+  .pagination {
     bottom: 0;
+
+    @include desktop {
+      display: none;
+    }
   }
 }

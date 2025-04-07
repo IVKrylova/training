@@ -28,6 +28,16 @@
       cursor: pointer;
       position: relative;
 
+      &:hover {
+        color: var(--main-color);
+
+        .icon {
+          path {
+            fill: var(--main-color);
+          }
+        }
+      }
+
       &:not(:last-child)::after {
         content: "";
         position: absolute;

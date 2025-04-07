@@ -14,7 +14,7 @@ export const PartnerCard: FC<PartnerCardInterface> = ({
 }): ReactNode => {
   return (
     <div className={s.card}>
-      <Image alt={name} src={logo} />
+      <Image alt={name} src={logo} width={85} height={25} className={s.logo} />
     </div>
   );
 };
