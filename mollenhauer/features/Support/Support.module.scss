@@ -1,0 +1,64 @@
+@import "../../styles/fonts";
+@import "../../styles/media";
+
+.section {
+  padding: 0 16px;
+  margin-top: 548px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  .title {
+    @include fontS16W400;
+    color: var(--main-color);
+    letter-spacing: 0.3px;
+  }
+
+  .description {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    .thesis {
+      @include fontS30W400;
+      letter-spacing: -1px;
+      color: var(--dark-orange-color);
+      max-width: 358px;
+
+      .icon {
+        width: 35px;
+        height: auto;
+        margin-top: 38px;
+      }
+    }
+
+    .text {
+      @include fontS13W600;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      color: var(--black-text-color);
+      max-width: 338px;
+    }
+  }
+
+  .list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    .itemTitle {
+      @include fontS26W700;
+      color: var(--black-color);
+    }
+
+    .itemText {
+      margin-top: 24px;
+      @include fontS14W400;
+      color: var(--grey-text-color);
+			letter-spacing: .3px;
+			max-width: 324px;
+    }
+  }
+}

@@ -19,6 +19,7 @@
   --blue-hovered-color: #1d4a99;
   --grey-color-icon: #4a4b4e;
   --grey-color-hovered-icon: #bbbec6;
+  --black-text-color: #1a171b;
 }
 
 html,
@@ -30,7 +31,7 @@ body {
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family:"source-sans-pro", Arial, Helvetica, sans-serif;
+  font-family: "source-sans-pro", Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
