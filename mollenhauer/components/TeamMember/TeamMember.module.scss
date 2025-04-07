@@ -1,0 +1,67 @@
+@import "../../styles/fonts";
+@import "../../styles/media";
+
+.member {
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+
+  .description {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    .name {
+      @include fontS15W700;
+      color: var(--black-color);
+      max-width: 70px;
+    }
+
+    .adminName {
+      @include fontS21W600;
+      max-width: 139px;
+    }
+
+    .position {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      @include fontS14W400;
+      color: var(--black-color);
+			max-width: 110px;
+
+      .icon {
+        width: 16px;
+        height: auto;
+      }
+    }
+
+    .adminPosition {
+      @include fontS16W400;
+			max-width: fit-content;
+
+      .adminIcon {
+        width: 19px;
+        height: auto;
+      }
+    }
+
+    .about {
+      @include fontS14W400;
+      color: var(--grey-text-color);
+    }
+
+		.link {
+			margin-top: 9px;
+		}
+  }
+}
+
+.admin {
+  gap: 30px;
+  flex-direction: row;
+
+  .adminDescription {
+    gap: 16px;
+  }
+}

@@ -5,6 +5,7 @@ import { Hero } from "@/features/Hero/Hero";
 import { Partners } from "@/features/Partners/Partners";
 import { Sevrises } from "@/features/Sevrises/Sevrises";
 import { Support } from "@/features/Support/Support";
+import { Team } from "@/features/Team/Team";
 
 export default function Home() {
   return <main>
@@ -15,5 +16,6 @@ export default function Home() {
     <Partners />
     <Clients />
     <Support />
+    <Team />
   </main>;
 }

@@ -1,0 +1,28 @@
+@import "../../styles/fonts";
+@import "../../styles/media";
+
+.section {
+	padding: 0 16px;
+	margin-top: 112px;
+	position: relative;
+
+	.title {
+		@include fontS30W700;
+		color: var(--black-color);
+	}
+
+	.subtitle {
+		margin-top: 24px;
+		@include fontS30W400;
+		color: var( --dark-orange-color);
+		letter-spacing: -1px;
+		max-width: 340px;
+		margin-bottom: 40px;
+	}
+
+	.teamList {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 32px;
+	}
+}

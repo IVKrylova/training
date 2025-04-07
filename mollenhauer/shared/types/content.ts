@@ -42,3 +42,22 @@ export type ClientItemType = {
 };
 
 export type ClientsListType = ClientItemType[];
+
+export type TeamMemberType = {
+  id: number;
+  name: string | "vacancy";
+  position: string;
+  link?: string;
+  about?: string;
+  avatar: StaticImageData;
+  isBlueBorder?: boolean;
+  isOrangeBorde?: boolean;
+  isAdmin?: boolean
+};
+
+export type TeamType = {
+  department: string;
+  team: TeamMemberType[];
+};
+
+export type TeamListType = TeamType[];
