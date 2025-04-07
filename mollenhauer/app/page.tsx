@@ -1,4 +1,5 @@
 import { Benefits } from "@/features/Benefits/Benefits";
+import { Clients } from "@/features/Clients/Clients";
 import { Expertise } from "@/features/Expertise/Expertise";
 import { Hero } from "@/features/Hero/Hero";
 import { Partners } from "@/features/Partners/Partners";
@@ -11,5 +12,6 @@ export default function Home() {
     <Expertise />
     <Benefits />
     <Partners />
+    <Clients />
   </main>;
 }

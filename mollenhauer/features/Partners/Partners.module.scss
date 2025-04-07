@@ -76,9 +76,7 @@
     }
 
     div[class*="swiper-slide"]:nth-child(3n)::after {
-      @include tablet {
-        display: none;
-      }
+      display: none;
 
       @include desktop {
         display: block;
@@ -101,7 +99,9 @@
     }
 
     div[class*="swiper-slide"]::before {
-      display: none;
+      @include tablet {
+        display: none;
+      }
     }
 
     div[class*="swiper-button-prev"],

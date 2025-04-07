@@ -3,6 +3,7 @@ import {
   ExpertiseListType,
   BenefitListType,
   PartnerListType,
+  ClientsListType,
 } from "../types/content";
 
 import benefitImg from "@/public/benefits.png";
@@ -251,5 +252,80 @@ export const PartnerList: PartnerListType = [
     id: 29,
     name: "LafergeHolcim",
     logo: lafergeHolcim,
+  },
+];
+
+export const ClientsList: ClientsListType = [
+  {
+    id: 1,
+    companyName: "Cemex",
+    logo: cemex,
+    text: "Pulvinar nisl nulla elit integer diam maecenas. Mauris nunc at arcu urna. Erat quisque neque, a augue lectus vitae faucibus facilisi. Aenean mauris duis sed congue magna scelerisque dolor eget in. Euismod eros, in cursus aliquam. Suspendisse odio est nullam vulputate quis nam ultricies.",
+    name: "Jack Carty",
+    job: "SEO",
+  },
+  {
+    id: 2,
+    companyName: "Zemetwerk Lubeck",
+    logo: zemetwerkLubeck,
+    text: "Pulvinar nisl nulla elit integer diam maecenas. Mauris nunc at arcu urna. Erat quisque neque, a augue lectus vitae faucibus facilisi. Aenean mauris duis sed congue magna scelerisque dolor eget in. Euismod eros, in cursus aliquam. Suspendisse odio est nullam vulputate quis nam ultricies.",
+    name: "Jack Carty",
+    job: "SEO",
+  },
+  {
+    id: 3,
+    companyName: "Buzzi Unicem",
+    logo: buzziUnicem,
+    text: "Pulvinar nisl nulla elit integer diam maecenas. Mauris nunc at arcu urna. Erat quisque neque, a augue lectus vitae faucibus facilisi. Aenean mauris duis sed congue magna scelerisque dolor eget in. Euismod eros, in cursus aliquam. Suspendisse odio est nullam vulputate quis nam ultricies.",
+    name: "Jack Carty",
+    job: "SEO",
+  },
+  {
+    id: 4,
+    companyName: "Thomas gruppe",
+    logo: thomasGruppe,
+    text: "Pulvinar nisl nulla elit integer diam maecenas. Mauris nunc at arcu urna. Erat quisque neque, a augue lectus vitae faucibus facilisi. Aenean mauris duis sed congue magna scelerisque dolor eget in. Euismod eros, in cursus aliquam. Suspendisse odio est nullam vulputate quis nam ultricies.",
+    name: "Jack Carty",
+    job: "SEO",
+  },
+  {
+    id: 5,
+    companyName: "Wittekind",
+    logo: wittekind,
+    text: "Pulvinar nisl nulla elit integer diam maecenas. Mauris nunc at arcu urna. Erat quisque neque, a augue lectus vitae faucibus facilisi. Aenean mauris duis sed congue magna scelerisque dolor eget in. Euismod eros, in cursus aliquam. Suspendisse odio est nullam vulputate quis nam ultricies.",
+    name: "Jack Carty",
+    job: "SEO",
+  },
+  {
+    id: 6,
+    companyName: "Spenner",
+    logo: spenner,
+    text: "Pulvinar nisl nulla elit integer diam maecenas. Mauris nunc at arcu urna. Erat quisque neque, a augue lectus vitae faucibus facilisi. Aenean mauris duis sed congue magna scelerisque dolor eget in. Euismod eros, in cursus aliquam. Suspendisse odio est nullam vulputate quis nam ultricies.",
+    name: "Jack Carty",
+    job: "SEO",
+  },
+  {
+    id: 7,
+    companyName: "InterCem",
+    logo: interCem,
+    text: "Pulvinar nisl nulla elit integer diam maecenas. Mauris nunc at arcu urna. Erat quisque neque, a augue lectus vitae faucibus facilisi. Aenean mauris duis sed congue magna scelerisque dolor eget in. Euismod eros, in cursus aliquam. Suspendisse odio est nullam vulputate quis nam ultricies.",
+    name: "Jack Carty",
+    job: "SEO",
+  },
+  {
+    id: 8,
+    companyName: "HeidelbergCemen",
+    logo: heidelbergCemen,
+    text: "Pulvinar nisl nulla elit integer diam maecenas. Mauris nunc at arcu urna. Erat quisque neque, a augue lectus vitae faucibus facilisi. Aenean mauris duis sed congue magna scelerisque dolor eget in. Euismod eros, in cursus aliquam. Suspendisse odio est nullam vulputate quis nam ultricies.",
+    name: "Jack Carty",
+    job: "SEO",
+  },
+  {
+    id: 9,
+    companyName: "LafergeHolcim",
+    logo: lafergeHolcim,
+    text: "Pulvinar nisl nulla elit integer diam maecenas. Mauris nunc at arcu urna. Erat quisque neque, a augue lectus vitae faucibus facilisi. Aenean mauris duis sed congue magna scelerisque dolor eget in. Euismod eros, in cursus aliquam. Suspendisse odio est nullam vulputate quis nam ultricies.",
+    name: "Jack Carty",
+    job: "SEO",
   },
 ];

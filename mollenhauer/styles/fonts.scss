@@ -1,7 +1,18 @@
+// size 12
+@mixin fontS12W600 {
+  font-size: 12px;
+  font-weight: 600;
+}
+
 // size 13
 @mixin fontS13W700 {
   font-size: 13px;
   font-weight: 700;
+}
+
+@mixin fontS13W400 {
+  font-size: 13px;
+  font-weight: 400;
 }
 
 // size 14
@@ -29,6 +40,11 @@
 @mixin fontS15W700 {
   font-size: 15px;
   font-weight: 700;
+}
+
+@mixin fontS15W800 {
+  font-size: 15px;
+  font-weight: 800;
 }
 
 // size 16
@@ -90,6 +106,11 @@
 @mixin fontS26W300 {
   font-size: 26px;
   font-weight: 300;
+}
+
+@mixin fontS26W600 {
+  font-size: 26px;
+  font-weight: 600;
 }
 
 // size 28

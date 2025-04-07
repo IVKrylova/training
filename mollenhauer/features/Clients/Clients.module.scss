@@ -1,0 +1,39 @@
+@import "../../styles/fonts";
+@import "../../styles/media";
+@import "../../styles/pagination";
+
+.section {
+  margin-top: 516px;
+  padding: 0 16px;
+  position: relative;
+
+  .title {
+    color: var(--black-color);
+    @include fontS26W600;
+  }
+
+  .text {
+    margin-top: 24px;
+    color: var(--grey-text-color);
+    @include fontS13W400;
+  }
+
+  .swiperWrap {
+    position: absolute;
+    margin-top: 32px;
+		width: 100%;
+		padding-bottom: 33px;
+
+    .pagination {
+			bottom: 0;
+    }
+
+    .bullet {
+      @include bullet;
+    }
+
+    .activeBullet {
+      @include activeBullet;
+    }
+  }
+}

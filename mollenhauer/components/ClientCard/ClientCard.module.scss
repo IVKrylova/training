@@ -1,0 +1,62 @@
+@import "../../styles/fonts";
+@import "../../styles/media";
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 358px;
+  padding: 54px 0 41px 46px;
+  border-top: 24px solid var(--orange-color);
+  border-bottom: 24px solid var(--orange-color);
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: calc(100% - 24px - 24px);
+    height: 54px;
+    top: 0;
+    left: 0;
+    border-left: 24px solid var(--orange-color);
+    border-right: 24px solid var(--orange-color);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: calc(100% - 24px - 24px);
+    height: 54px;
+    bottom: 0;
+    left: 0;
+    border-left: 24px solid var(--orange-color);
+  }
+
+  .text {
+    @include fontS15W400;
+    font-style: italic;
+    color: var(--grey-color-icon);
+    margin-top: 24px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 24px;
+      height: 20px;
+      bottom: 0;
+      right: 0;
+      border-right: 24px solid var(--orange-color);
+    }
+  }
+
+  .name {
+    margin-top: 12px;
+    color: var(--main-color);
+    @include fontS15W800;
+  }
+
+  .job {
+    margin-top: 10px;
+    color: var(--orange-color);
+    @include fontS12W600;
+  }
+}
