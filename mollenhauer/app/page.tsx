@@ -4,6 +4,7 @@ import { Expertise } from "@/features/Expertise/Expertise";
 import { Hero } from "@/features/Hero/Hero";
 import { Partners } from "@/features/Partners/Partners";
 import { Sevrises } from "@/features/Sevrises/Sevrises";
+import { Support } from "@/features/Support/Support";
 
 export default function Home() {
   return <main>
@@ -13,5 +14,6 @@ export default function Home() {
     <Benefits />
     <Partners />
     <Clients />
+    <Support />
   </main>;
 }

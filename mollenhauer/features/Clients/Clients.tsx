@@ -28,39 +28,35 @@ export const Clients: FC = (): ReactNode => {
         </p>
       </div>
 
-      <div className={s.slider}>
-        
+      <Swiper
+        slidesPerView={1}
+        loop
+        onSwiper={(swiper: SwiperType) => (swiperRef.current = swiper)}
+        pagination={{
+          clickable: true,
+          bulletClass: s.bullet,
+          bulletActiveClass: s.activeBullet,
+          horizontalClass: s.pagination,
+        }}
+        modules={[Pagination]}
+        className={s.swiperWrap}
+        breakpoints={{
+          768: {
+            spaceBetween: 232,
+          },
+        }}
+      >
+        {ClientsList.map((el) => (
+          <SwiperSlide key={el.id} className={s.slide}>
+            <ClientCard {...el} />
+          </SwiperSlide>
+        ))}
 
-        <Swiper
-          slidesPerView={1}
-          loop
-					onSwiper={(swiper: SwiperType) => (swiperRef.current = swiper)}
-          pagination={{
-            clickable: true,
-            bulletClass: s.bullet,
-            bulletActiveClass: s.activeBullet,
-            horizontalClass: s.pagination,
-          }}
-          modules={[Pagination]}
-          className={s.swiperWrap}
-          breakpoints={{
-            768: {
-              spaceBetween: 232,
-            },
-          }}
-        >
-          {ClientsList.map((el) => (
-            <SwiperSlide key={el.id} className={s.slide}>
-              <ClientCard {...el} />
-            </SwiperSlide>
-          ))}
-
-<CustomNextPrevNavigation
+        <CustomNextPrevNavigation
           className={s.prevNextNavigation}
           swiperRef={swiperRef}
         />
-        </Swiper>
-      </div>
+      </Swiper>
     </section>
   );
 };

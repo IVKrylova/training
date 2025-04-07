@@ -5,14 +5,19 @@
 }
 
 // size 13
-@mixin fontS13W700 {
-  font-size: 13px;
-  font-weight: 700;
-}
-
 @mixin fontS13W400 {
   font-size: 13px;
   font-weight: 400;
+}
+
+@mixin fontS13W600 {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+@mixin fontS13W700 {
+  font-size: 13px;
+  font-weight: 700;
 }
 
 // size 14
@@ -119,24 +124,43 @@
   font-weight: 600;
 }
 
+@mixin fontS26W700 {
+  font-size: 26px;
+  font-weight: 700;
+}
+
 // size 28
 @mixin fontS28W700 {
   font-size: 28px;
   font-weight: 700;
 }
 
+@mixin fontS28W900 {
+  font-size: 28px;
+  font-weight: 900;
+}
+
 // size 30
+@mixin fontS30W400 {
+  font-size: 30px;
+  font-weight: 400;
+}
+
 @mixin fontS30W700 {
   font-size: 30px;
   font-weight: 700;
 }
 
 // size 32
+@mixin fontS32W400 {
+  font-size: 32px;
+  font-weight: 400;
+}
+
 @mixin fontS32W600 {
   font-size: 32px;
   font-weight: 600;
 }
-
 
 // size 38
 @mixin fontS38W400 {
