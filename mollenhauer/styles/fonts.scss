@@ -135,6 +135,11 @@
   font-weight: 700;
 }
 
+@mixin fontS28W900 {
+  font-size: 28px;
+  font-weight: 900;
+}
+
 // size 30
 @mixin fontS30W400 {
   font-size: 30px;
@@ -147,6 +152,11 @@
 }
 
 // size 32
+@mixin fontS32W400 {
+  font-size: 32px;
+  font-weight: 400;
+}
+
 @mixin fontS32W600 {
   font-size: 32px;
   font-weight: 600;

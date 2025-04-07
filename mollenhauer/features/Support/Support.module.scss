@@ -7,15 +7,24 @@
   display: flex;
   flex-direction: column;
 
-	@include tablet {
-		padding: 0 44px;
-		margin-top: 444px;
-	}
+  @include tablet {
+    padding: 0 44px;
+    margin-top: 444px;
+  }
+
+  @include desktop {
+    padding: 0 144px;
+    margin-top: 626px;
+  }
 
   .title {
     @include fontS16W400;
     color: var(--main-color);
     letter-spacing: 0.3px;
+
+    @include desktop {
+      @include fontS18W400;
+    }
   }
 
   .description {
@@ -23,12 +32,17 @@
     display: flex;
     flex-direction: column;
     gap: 40px;
-		margin-bottom: 40px;
+    margin-bottom: 40px;
 
-		@include tablet {
-			flex-direction: row;
-			margin-bottom: 60px;
-		}
+    @include tablet {
+      flex-direction: row;
+      margin-bottom: 60px;
+    }
+
+    @include desktop {
+      gap: 136px;
+      margin-bottom: 36px;
+    }
 
     .thesis {
       @include fontS30W400;
@@ -36,20 +50,25 @@
       color: var(--dark-orange-color);
       max-width: 358px;
 
-			.subtitle {
-				@include tablet {
-					max-width: 258px;
-				}
-			}
+      .subtitle {
+        @include tablet {
+          max-width: 258px;
+        }
+
+        @include desktop {
+          @include fontS32W400;
+          max-width: 286px;
+        }
+      }
 
       .icon {
         width: 35px;
         height: auto;
         margin-top: 38px;
 
-				@include tablet {
-					margin-top: 43px;
-				}
+        @include tablet {
+          margin-top: 43px;
+        }
       }
     }
 
@@ -61,9 +80,20 @@
       color: var(--black-text-color);
       max-width: 338px;
 
-			@include tablet {
-				max-width: 426px;
-			}
+      @include tablet {
+        max-width: 426px;
+      }
+
+      @include desktop {
+        max-width: 684px;
+        column-gap: 40px;
+        flex-direction: row;
+        @include fontS16W600;
+
+        p:first-of-type {
+          max-width: 322px;
+        }
+      }
     }
   }
 
@@ -72,26 +102,45 @@
     flex-direction: column;
     gap: 40px;
 
-		@include tablet {
-			flex-direction: row;
-			gap: 18px;
-		}
+    @include tablet {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      width: 100%;
+    }
+
+    @include desktop {
+      padding-left: 422px;
+      gap: 82px;
+    }
 
     .itemTitle {
       @include fontS26W700;
       color: var(--black-color);
 
-			@include tablet {
-				max-width: 200px;
-			} 
+      @include tablet {
+        max-width: 144px;
+      }
+
+      @include desktop {
+        @include fontS28W900;
+      }
     }
 
     .itemText {
       margin-top: 24px;
       @include fontS14W400;
       color: var(--grey-text-color);
-			letter-spacing: .3px;
-			max-width: 324px;
+      letter-spacing: 0.3px;
+      max-width: 324px;
+
+      @include tablet {
+        max-width: 100%;
+      }
+
+      @include desktop {
+        @include fontS16W400;
+      }
     }
   }
 }
