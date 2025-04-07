@@ -31,3 +31,14 @@ export type PartnerItemType = {
 };
 
 export type PartnerListType = PartnerItemType[];
+
+export type ClientItemType = {
+  id: number;
+  companyName: string;
+  logo: StaticImageData;
+  text: string;
+  name: string;
+  job: string;
+};
+
+export type ClientsListType = ClientItemType[];

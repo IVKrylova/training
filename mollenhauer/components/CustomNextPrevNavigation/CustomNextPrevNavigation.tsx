@@ -8,7 +8,7 @@ import { ArrowIcon } from "../Icons/ArrowIcon/ArrowIcon";
 interface CustomNextPrevNavigationInterface {
   className?: string;
   swiperRef: RefObject<Swiper | null>;
-  setActive: (idx: number) => void;
+  setActive?: (idx: number) => void;
 }
 
 export const CustomNextPrevNavigation: FC<
@@ -16,12 +16,12 @@ export const CustomNextPrevNavigation: FC<
 > = ({ className, swiperRef, setActive }): ReactNode => {
   const clickNext = () => {
     swiperRef?.current?.slideNext(0);
-    setActive(swiperRef?.current ? swiperRef?.current?.activeIndex : 0);
+    setActive?.(swiperRef?.current ? swiperRef?.current?.activeIndex : 0);
   };
 
   const clickPrev = () => {
     swiperRef?.current?.slidePrev(0);
-    setActive(swiperRef?.current ? swiperRef?.current?.activeIndex : 0);
+    setActive?.(swiperRef?.current ? swiperRef?.current?.activeIndex : 0);
   };
 
   return (

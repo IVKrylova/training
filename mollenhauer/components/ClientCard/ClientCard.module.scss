@@ -1,0 +1,125 @@
+@import "../../styles/fonts";
+@import "../../styles/media";
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 358px;
+  padding: 54px 0 41px 46px;
+  border-top: 24px solid var(--orange-color);
+  border-bottom: 24px solid var(--orange-color);
+  position: relative;
+
+  @include tablet {
+    width: 427px;
+    padding: 65px 0 27px 55px;
+  }
+
+  @include desktop {
+    width: 578px;
+    padding: 88px 0 72px 60px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: calc(100% - 24px - 24px);
+    height: 54px;
+    top: 0;
+    left: 0;
+    border-left: 24px solid var(--orange-color);
+    border-right: 24px solid var(--orange-color);
+
+    @include tablet {
+      height: 70px;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: calc(100% - 24px - 24px);
+    height: 54px;
+    bottom: 0;
+    left: 0;
+    border-left: 24px solid var(--orange-color);
+
+    @include tablet {
+      height: 70px;
+    }
+  }
+
+  .logo {
+    @include tablet {
+      width: 150px;
+      height: 36px;
+    }
+
+		@include desktop {
+      width: 202px;
+      height: 63px;
+    }
+  }
+
+  .text {
+    @include fontS15W400;
+    font-style: italic;
+    color: var(--grey-color-icon);
+    margin-top: 24px;
+
+    @include tablet {
+      margin-top: 30px;
+      min-width: 426px;
+    }
+
+		@include desktop {
+      margin-top: 40px;
+			@include fontS19W400;
+			min-width: 564px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 24px;
+      height: 20px;
+      bottom: 0;
+      right: 0;
+      border-right: 24px solid var(--orange-color);
+
+      @include tablet {
+        height: 30px;
+      }
+    }
+  }
+
+  .name {
+    margin-top: 12px;
+    color: var(--main-color);
+    @include fontS15W800;
+
+    @include tablet {
+      margin-top: 66px;
+    }
+
+		@include desktop {
+      margin-top: 86px;
+			@include fontS20W700;
+    }
+  }
+
+  .job {
+    margin-top: 10px;
+    color: var(--orange-color);
+    @include fontS12W600;
+
+    @include tablet {
+      margin-top: 12px;
+    }
+
+		@include desktop {
+			@include fontS15W600;
+			margin-top: 14px;
+    }
+  }
+}
