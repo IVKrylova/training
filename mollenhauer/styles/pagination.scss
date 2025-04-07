@@ -1,0 +1,13 @@
+@mixin bullet {
+  width: 9px;
+  height: 9px;
+  background: var(--bullet-color);
+  opacity: 1;
+  display: inline-block;
+  border-radius: 50%;
+  margin: 0 4px;
+}
+
+@mixin activeBullet {
+  background: var(--orange-color);
+}

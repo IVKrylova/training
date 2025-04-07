@@ -18,8 +18,8 @@ export const ArrowIcon: FC<ArrowIcon> = ({ className }): ReactNode => {
       <path
         d="M9 1.6L1 8.5L9 15.6"
         stroke="#F7F9FC"
-        stroke-width="2"
-        stroke-linecap="round"
+        strokeWidth="2"
+        strokeLinecap="round"
       />
     </svg>
   );

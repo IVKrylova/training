@@ -1,0 +1,26 @@
+@import "../../styles/media";
+
+.card {
+  width: 119px;
+  height: 89px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include tablet {
+    width: 223px;
+    height: 128px;
+  }
+
+  .logo {
+    @include tablet {
+      width: 144px;
+      height: 27px;
+    }
+
+    @include desktop {
+      width: 142px;
+      height: 26px;
+    }
+  }
+}

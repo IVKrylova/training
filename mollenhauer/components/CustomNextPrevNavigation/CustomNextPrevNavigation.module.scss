@@ -8,18 +8,26 @@
 
   .prev {
     background-color: var(--blue-color);
+
+    &:hover {
+      background-color: var(--blue-hovered-color);
+    }
   }
 
   .next {
     background-color: var(--dark-orange-color);
+
+    &:hover {
+      background-color: var(--orange-hovered-color);
+    }
   }
 
-	.icon {
-		width: 8px;
-		height: 14px;
-	}
+  .icon {
+    width: 8px;
+    height: 14px;
+  }
 
-	.nextIcon {
-		rotate: 180deg;
-	}
+  .nextIcon {
+    rotate: 180deg;
+  }
 }

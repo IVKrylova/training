@@ -1,5 +1,6 @@
 @import "../../styles/fonts";
 @import "../../styles/media";
+@import "../../styles/graphics";
 
 .navigation {
   width: 100%;
@@ -14,7 +15,6 @@
     z-index: 10;
     padding: 17px 34px 6px 60px;
     @include fontS20W600;
-    // height: 124.5px;
   }
 
   .list {
@@ -28,14 +28,24 @@
       cursor: pointer;
       position: relative;
 
+      &:hover {
+        color: var(--main-color);
+
+        .icon {
+          path {
+            fill: var(--main-color);
+          }
+        }
+      }
+
       &:not(:last-child)::after {
-        height: 95%;
-        border-image: url(../../public/border.svg) 0 fill;
         content: "";
+        position: absolute;
         top: 0;
         right: 0;
-        width: 1px;
-        position: absolute;
+        width: 0.5px;
+        height: 100%;
+        @include borderVertical;
       }
 
       .id {
@@ -58,7 +68,7 @@
         @include desktop {
           width: 18px;
           height: 18px;
-					margin-left: 21px;
+          margin-left: 21px;
         }
       }
 

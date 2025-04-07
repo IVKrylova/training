@@ -23,3 +23,11 @@ export type BenefitItemType = {
 };
 
 export type BenefitListType = BenefitItemType[];
+
+export type PartnerItemType = {
+  id: number;
+  name: string;
+  logo: StaticImageData;
+};
+
+export type PartnerListType = PartnerItemType[];

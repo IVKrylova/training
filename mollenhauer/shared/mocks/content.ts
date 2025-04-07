@@ -1,6 +1,20 @@
-import { Menu, ExpertiseListType, BenefitListType } from "../types/content";
+import {
+  Menu,
+  ExpertiseListType,
+  BenefitListType,
+  PartnerListType,
+} from "../types/content";
 
 import benefitImg from "@/public/benefits.png";
+import cemex from "@/public/cemexLogo.svg";
+import zemetwerkLubeck from "@/public/zlLogo.svg";
+import buzziUnicem from "@/public/buLogo.svg";
+import thomasGruppe from "@/public/thomasGruppeLogo.svg";
+import wittekind from "@/public/wittekindLogo.svg";
+import spenner from "@/public/spennerLogo.svg";
+import interCem from "@/public/InterCemLogo.svg";
+import heidelbergCemen from "@/public/heidelbergLogo.svg";
+import lafergeHolcim from "@/public/lafargeHolcimLogo.svg";
 
 export const menu: Menu = [
   {
@@ -99,5 +113,143 @@ export const BenefitList: BenefitListType = [
     img: benefitImg,
     title: "Demolition",
     text: "Our decade-long permanent presence on cement plants allows us to anticipate use changes, unexpected utilisation and lifetime expositions early on during planning. This allows us to design buildings that are flexible, long-lasting and economically efficient.",
+  },
+];
+
+export const PartnerList: PartnerListType = [
+  {
+    id: 1,
+    name: "Cemex",
+    logo: cemex,
+  },
+  {
+    id: 2,
+    name: "Zemetwerk Lubeck",
+    logo: zemetwerkLubeck,
+  },
+  {
+    id: 3,
+    name: "Buzzi Unicem",
+    logo: buzziUnicem,
+  },
+  {
+    id: 4,
+    name: "Thomas gruppe",
+    logo: thomasGruppe,
+  },
+  {
+    id: 5,
+    name: "Wittekind",
+    logo: wittekind,
+  },
+  {
+    id: 6,
+    name: "Spenner",
+    logo: spenner,
+  },
+  {
+    id: 7,
+    name: "InterCem",
+    logo: interCem,
+  },
+  {
+    id: 8,
+    name: "HeidelbergCemen",
+    logo: heidelbergCemen,
+  },
+  {
+    id: 9,
+    name: "LafergeHolcim",
+    logo: lafergeHolcim,
+  },
+  {
+    id: 11,
+    name: "Cemex",
+    logo: cemex,
+  },
+  {
+    id: 12,
+    name: "Zemetwerk Lubeck",
+    logo: zemetwerkLubeck,
+  },
+  {
+    id: 13,
+    name: "Buzzi Unicem",
+    logo: buzziUnicem,
+  },
+  {
+    id: 14,
+    name: "Thomas gruppe",
+    logo: thomasGruppe,
+  },
+  {
+    id: 15,
+    name: "Wittekind",
+    logo: wittekind,
+  },
+  {
+    id: 16,
+    name: "Spenner",
+    logo: spenner,
+  },
+  {
+    id: 17,
+    name: "InterCem",
+    logo: interCem,
+  },
+  {
+    id: 18,
+    name: "HeidelbergCemen",
+    logo: heidelbergCemen,
+  },
+  {
+    id: 19,
+    name: "LafergeHolcim",
+    logo: lafergeHolcim,
+  },
+  {
+    id: 21,
+    name: "Cemex",
+    logo: cemex,
+  },
+  {
+    id: 22,
+    name: "Zemetwerk Lubeck",
+    logo: zemetwerkLubeck,
+  },
+  {
+    id: 23,
+    name: "Buzzi Unicem",
+    logo: buzziUnicem,
+  },
+  {
+    id: 24,
+    name: "Thomas gruppe",
+    logo: thomasGruppe,
+  },
+  {
+    id: 25,
+    name: "Wittekind",
+    logo: wittekind,
+  },
+  {
+    id: 26,
+    name: "Spenner",
+    logo: spenner,
+  },
+  {
+    id: 27,
+    name: "InterCem",
+    logo: interCem,
+  },
+  {
+    id: 28,
+    name: "HeidelbergCemen",
+    logo: heidelbergCemen,
+  },
+  {
+    id: 29,
+    name: "LafergeHolcim",
+    logo: lafergeHolcim,
   },
 ];
