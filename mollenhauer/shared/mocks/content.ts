@@ -5,6 +5,7 @@ import {
   PartnerListType,
   ClientsListType,
   TeamListType,
+  socialMediaListType,
 } from "../types/content";
 
 import benefitImg from "@/public/benefits.png";
@@ -26,6 +27,8 @@ import stefanWiek from "@/public/stefanWiek.png";
 import defaultAvatar from "@/public/defaultAvatar.png";
 import domenikSchmidt from "@/public/domenikSchmidt.png";
 import manuelaSonntag from "@/public/manuelaSonntag.png";
+import ig from "@/public/Instagram.svg";
+import fb from "@/public/facebook.svg";
 
 export const menu: Menu = [
   {
@@ -353,7 +356,7 @@ export const teamList: TeamListType = [
           "Viverra in turpis vitae tincidunt. Odio nunc netus consectetur libero duis. Est quis vitae, sed egestas vehicula.",
         avatar: timNicolas,
         isOrangeBorde: true,
-        isAdmin: true
+        isAdmin: true,
       },
       {
         id: 2,
@@ -364,7 +367,7 @@ export const teamList: TeamListType = [
           "Duis aenean ultricies ullamcorper neque cras vel. Quam sem turpis est morbi nunc odio feugiat pellentesque. Eget risus lectus donec tempus cras. Amet amet, auctor habitasse tristique pellentesque id velit.",
         avatar: klausDieter,
         isBlueBorder: true,
-        isAdmin: true
+        isAdmin: true,
       },
     ],
   },
@@ -472,5 +475,18 @@ export const teamList: TeamListType = [
         isOrangeBorde: true,
       },
     ],
+  },
+];
+
+export const socialMediaList: socialMediaListType = [
+  {
+    name: "Instagram",
+    logo: ig,
+    link: "#",
+  },
+  {
+    name: "Facebook",
+    logo: fb,
+    link: "#",
   },
 ];
