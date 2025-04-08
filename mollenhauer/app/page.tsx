@@ -6,18 +6,20 @@ import { Partners } from "@/features/Partners/Partners";
 import { Sevrises } from "@/features/Sevrises/Sevrises";
 import { Support } from "@/features/Support/Support";
 import { Team } from "@/features/Team/Team";
-import { Map } from "@/features/Map/Map";
+import { Contacts } from "@/features/Contacts/Contacts";
 
 export default function Home() {
-  return <main>
-    <Hero />
-    <Sevrises />
-    <Expertise />
-    <Benefits />
-    <Partners />
-    <Clients />
-    <Support />
-    <Team />
-    <Map />
-  </main>;
+  return (
+    <main>
+      <Hero />
+      <Sevrises />
+      <Expertise />
+      <Benefits />
+      <Partners />
+      <Clients />
+      <Support />
+      <Team />
+      <Contacts />
+    </main>
+  );
 }

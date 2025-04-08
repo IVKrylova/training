@@ -1,7 +1,7 @@
-@import "../../styles/fonts";
-@import "../../styles/media";
-@import "../../styles/pagination";
-@import "../../styles/graphics";
+@use "../../styles/fonts"  as *;
+@use "../../styles/media"  as *;
+@use "../../styles/pagination"  as *;
+@use "../../styles/graphics"  as *;
 
 .section {
   margin-top: 608px;
