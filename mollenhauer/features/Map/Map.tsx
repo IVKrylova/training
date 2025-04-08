@@ -11,6 +11,7 @@ import { ADDRESS } from "@/shared/constants/map";
 import { socialMediaList } from "@/shared/mocks/content";
 
 import { H2 } from "@/components/H2/H2";
+import { ShortLogo } from "@/components/ShortLogo/ShortLogo";
 
 import s from "./Map.module.scss";
 import "leaflet/dist/leaflet.css";
@@ -45,27 +46,30 @@ export const Map: FC = (): ReactNode => {
       </MapContainer>
 
       <div className={s.contacts}>
-        <H2 text="Contacts:" className={s.title} />
-        <address className={s.address}>
-          Erwitter Str. 40, 59590 Geseke GERMANY
-        </address>
-        <a href="tel:+492942" className={s.tel}>
-          +49 29 42 / 97 83 71
-        </a>
-        <a href="email:info@m-bp.de" className={s.email}>
-          info@m-bp.de
-        </a>
-        <div className={s.socialMedia}>
-          <div>Our Social Media:</div>
-          <ul className={s.list}>
-            {socialMediaList.map((el) => (
-              <li key={el.name}>
-                <a href={el.link}>
-                  <Image src={el.logo} alt={el.name} width={30} height={30} />
-                </a>
-              </li>
-            ))}
-          </ul>
+        <ShortLogo className={s.logo} />
+        <div className={s.data}>
+          <H2 text="Contacts:" className={s.title} />
+          <address className={s.address}>
+            Erwitter Str. 40, 59590 Geseke GERMANY
+          </address>
+          <a href="tel:+492942" className={s.tel}>
+            +49 29 42 / 97 83 71
+          </a>
+          <a href="email:info@m-bp.de" className={s.email}>
+            info@m-bp.de
+          </a>
+          <div className={s.socialMedia}>
+            <div>Our Social Media:</div>
+            <ul className={s.list}>
+              {socialMediaList.map((el) => (
+                <li key={el.name}>
+                  <a href={el.link}>
+                    <Image src={el.logo} alt={el.name} width={30} height={30} />
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </section>
