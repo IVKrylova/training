@@ -6,11 +6,24 @@
   width: max-content;
   transition: 0.2s;
   @include fontS15W700;
+  cursor: pointer;
 }
 
 .orange {
   background-color: var(--dark-orange-color);
   color: var(--white-color);
+
+  &:hover {
+    background-color: var(--orange-hovered-color);
+  }
+}
+
+.round {
+  background-color: var(--orange-color);
+  color: var(--white-color);
+  border-radius: 13px;
+  @include fontS13W600;
+  white-space: nowrap;
 
   &:hover {
     background-color: var(--orange-hovered-color);

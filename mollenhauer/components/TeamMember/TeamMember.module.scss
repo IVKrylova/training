@@ -1,0 +1,242 @@
+@import "../../styles/fonts";
+@import "../../styles/media";
+
+.member {
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+
+  .avatarWrap {
+    max-height: fit-content;
+  }
+
+  .orangeBorder {
+    position: relative;
+
+    &::after {
+      content: "";
+      z-index: -1;
+      background-image: url(../../public/orangeRectangle.svg);
+      position: absolute;
+      bottom: 5px;
+      right: -16px;
+      width: 127px;
+      height: 96px;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      @include desktop {
+        width: 210px;
+        bottom: 40px;
+        right: -50px;
+        rotate: 105deg;
+        height: 176px;
+      }
+    }
+  }
+
+  .orangeBorderMember {
+    &::after {
+      right: -12px;
+      width: 97px;
+      height: 76px;
+
+      @include desktop {
+        right: -37px;
+        width: 144px;
+        height: 112px;
+        bottom: 32px;
+      }
+    }
+  }
+
+  .adminAvatarOrange {
+    &::before {
+      @include tablet {
+        content: "";
+        z-index: -1;
+        background-image: url(../../public/orangeRectangle.svg);
+        position: absolute;
+        bottom: 68px;
+        right: -16px;
+        width: 127px;
+        height: 96px;
+      }
+
+      @include desktop {
+        display: none;
+      }
+    }
+  }
+
+  .blueBorder {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      bottom: -5px;
+      right: 40px;
+      background-image: url(../../public/blueRectangle.svg);
+      width: 100px;
+      height: 90px;
+      background-repeat: no-repeat;
+      rotate: -11deg;
+
+      @include desktop {
+        bottom: -30px;
+        width: 246px;
+        height: 201px;
+      }
+    }
+  }
+
+  .avatar {
+    @include tablet {
+      width: 113px;
+      height: 113px;
+    }
+
+    @include desktop {
+      width: 215px;
+      height: 215px;
+    }
+  }
+
+  .adminAvatar {
+    @include tablet {
+      width: 160px;
+      height: 192px;
+    }
+
+    @include desktop {
+      width: 287px;
+      height: 345px;
+    }
+  }
+
+  .description {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    @include tablet {
+      gap: 12px;
+    }
+
+    @include desktop {
+      gap: 16px;
+    }
+
+    .name {
+      @include fontS15W700;
+      color: var(--black-color);
+      max-width: 70px;
+
+      @include desktop {
+        @include fontS20W700;
+      }
+    }
+
+    .vacancy {
+      display: flex;
+      gap: 8px;
+
+      @include desktop {
+        gap: 16px;
+      }
+    }
+
+    .button {
+      padding: 3px;
+      @include fontS12W400;
+
+      @include desktop {
+        padding: 3px 11px 5px 13px;
+        @include fontS13W600;
+      }
+    }
+
+    .adminName {
+      @include fontS21W600;
+      max-width: 139px;
+
+      @include desktop {
+        @include fontS36W700;
+        max-width: 100%;
+      }
+    }
+
+    .position {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      @include fontS14W400;
+      color: var(--black-color);
+      max-width: 110px;
+
+      @include desktop {
+        @include fontS16W400;
+        max-width: 175px;
+      }
+
+      .icon {
+        width: 16px;
+        height: auto;
+      }
+    }
+
+    .adminPosition {
+      @include fontS16W400;
+      max-width: fit-content;
+
+      .adminIcon {
+        width: 19px;
+        height: auto;
+      }
+    }
+
+    .about {
+      @include fontS14W400;
+      color: var(--grey-text-color);
+
+      @include desktop {
+        @include fontS16W400;
+      }
+    }
+
+    .link {
+      margin-top: 9px;
+
+      @include desktop {
+        margin-top: 16px;
+      }
+    }
+  }
+}
+
+.admin {
+  gap: 30px;
+  flex-direction: row;
+
+  @include tablet {
+    gap: 21px;
+  }
+
+  @include desktop {
+    gap: 46px;
+  }
+
+  .adminDescription {
+    gap: 16px;
+
+    @include tablet {
+      max-width: 140px;
+    }
+
+    @include desktop {
+      max-width: 260px;
+    }
+  }
+}

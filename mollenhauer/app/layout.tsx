@@ -1,18 +1,13 @@
 import type { Metadata } from "next";
 import { ReactNode } from "react";
-import { Source_Code_Pro } from "next/font/google";
 import cn from "classnames";
+import Head from "next/head";
 
 import { Header } from "@/components/Header/Header";
+import { Footer } from "@/components/Footer/Footer";
 
 import "./globals.css";
 import s from "./page.module.scss";
-
-const sourceCodePro = Source_Code_Pro({
-  variable: "--font-source-code-pro",
-  subsets: ["latin"],
-  weight: ["300", "400", "600", "900"],
-});
 
 export const metadata: Metadata = {
   title: "Molenhauer",
@@ -26,9 +21,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn(sourceCodePro.variable, s.body)}>
+      <Head>
+        <link rel="stylesheet" href="https://use.typekit.net/iay1zki.css" />{" "}
+      </Head>
+      <body className={cn(s.body)}>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

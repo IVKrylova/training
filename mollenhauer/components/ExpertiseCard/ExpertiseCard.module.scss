@@ -1,0 +1,121 @@
+@import "../../styles/fonts";
+@import "../../styles/media";
+
+.card {
+  width: 358px;
+  height: 641px;
+  border: solid 0.73px var(--grey-border-color);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  display: flex;
+  flex-direction: column;
+
+  @include tablet {
+    width: 210px;
+    height: 355px;
+  }
+
+  @include desktop {
+    width: 288px;
+    height: 488px;
+  }
+
+  .number {
+    margin-top: 34px;
+    margin-left: 22px;
+    color: var(--dark-orange-color);
+    @include fontS20W700;
+
+    @include tablet {
+      margin-top: 40px;
+      margin-left: 27px;
+      @include fontS14W700;
+    }
+
+    @include desktop {
+      margin-top: 55px;
+      margin-left: 37px;
+      @include fontS17W800;
+    }
+  }
+
+  .icon {
+    width: 21px;
+    height: 21px;
+    margin-left: 41px;
+
+    @include tablet {
+      width: 14px;
+      height: 14px;
+      margin-left: 43px;
+    }
+
+    @include desktop {
+      width: 18px;
+      height: 18px;
+      margin-left: 58px;
+    }
+  }
+
+  .title {
+    max-width: 150px;
+    margin-top: 290px;
+    margin-left: 22px;
+
+    @include tablet {
+      margin-top: 128px;
+      @include fontS13W700;
+    }
+
+    @include desktop {
+      margin-top: 178px;
+      @include fontS17W800;
+      max-width: 248px;
+    }
+  }
+
+  &:hover {
+    background-image: url("../../public/expertiseHopverBg.png");
+    background-size: cover;
+    cursor: pointer;
+
+    .title {
+      color: var(--white-color);
+    }
+
+    .number {
+      color: var(--white-color);
+    }
+
+    .icon {
+      path {
+        fill: var(--white-color);
+      }
+    }
+  }
+}
+
+.bg01 {
+  background-image: url("../../public/expCardBottom1.png");
+}
+
+.bg02 {
+  background-image: url("../../public/expCardBottom2.png");
+}
+
+.bg03 {
+  background-image: url("../../public/expCardBottom3.png");
+}
+
+.bg04 {
+  background-image: url("../../public/expCardBottom4.png");
+}
+
+.bg05 {
+  background-image: url("../../public/expCardBottom5.png");
+}
+
+.bg06 {
+  background-image: url("../../public/expCardBottom6.png");
+}

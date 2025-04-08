@@ -1,0 +1,140 @@
+@import "../../styles/fonts";
+@import "../../styles/media";
+@import "../../styles/pagination";
+@import "../../styles/graphics";
+
+.section {
+  margin-top: 608px;
+  padding: 0 16px;
+  margin-bottom: 56px;
+  position: relative;
+
+  @include tablet {
+    margin-top: 434px;
+    padding: 0 40px 0 44px;
+
+    &::after {
+      content: "";
+      background-image: url(../../public/bgPartnersTablet.png);
+      background-size: cover;
+      position: absolute;
+      top: -396px;
+      left: 0;
+      z-index: -1;
+      width: 100%;
+      height: 2826px;
+    }
+  }
+
+  @include desktop {
+    margin-top: 820px;
+    padding: 0 144px;
+
+    &::after {
+      background-image: url(../../public/bgPartnersDesktop.png);
+      top: -564px;
+      height: 3826px;
+    }
+  }
+
+  .title {
+    @include fontS24W700;
+    color: var(--black-color);
+    max-width: 300px;
+    margin-bottom: 56px;
+
+    @include tablet {
+      margin-bottom: 32px;
+    }
+
+    @include desktop {
+      margin-bottom: 11px;
+    }
+  }
+
+  .slider {
+    position: relative;
+  }
+
+  .swiperWrap {
+    position: absolute;
+    width: 100%;
+    padding-bottom: 92px;
+
+    @include tablet {
+      padding-bottom: 40px;
+    }
+
+    div[class*="swiper-slide"]::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 0.5px;
+      height: 100%;
+      @include borderVertical;
+    }
+
+    div[class*="swiper-slide"]:nth-child(3n)::after {
+      display: none;
+
+      @include desktop {
+        display: block;
+      }
+    }
+
+    div[class*="swiper-slide"]:nth-child(4n)::after {
+      @include desktop {
+        display: none;
+      }
+    }
+
+    div[class*="swiper-slide"]:not(:nth-child(7)):not(:nth-child(8)):not(
+        :nth-child(9)
+      ):not(:nth-child(16)):not(:nth-child(17)):not(:nth-child(18)):not(
+        :nth-child(25)
+      ):not(:nth-child(26)):not(:nth-child(27))::before {
+      @include partnersBorderBottom;
+      @include borderHorizontal;
+    }
+
+    div[class*="swiper-slide"]::before {
+      @include tablet {
+        display: none;
+      }
+    }
+
+    div[class*="swiper-button-prev"],
+    div[class*="swiper-button-next"] {
+      display: none;
+
+      @include desktop {
+        --swiper-navigation-size: 14px;
+        display: flex;
+        top: calc(50% - 14px);
+        width: 7px;
+        color: var(--grey-color-icon);
+
+        &:hover {
+          color: var(--grey-color-hovered-icon);
+        }
+      }
+    }
+  }
+
+  .bullet {
+    @include bullet;
+  }
+
+  .activeBullet {
+    @include activeBullet;
+  }
+
+  .pagination {
+    bottom: 0;
+
+    @include desktop {
+      display: none;
+    }
+  }
+}

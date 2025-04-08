@@ -4,12 +4,12 @@ import Link from "next/link";
 
 import { CloseIcon } from "@/components/Icons/CloseIcon/CloseIcon";
 import { Language } from "@/features/Language/Language";
+import { Button } from "@/components/Button/Button";
+import { DocList } from "@/components/DocList/DocList";
 
 import s from "./SandwichMenuList.module.scss";
 
-import { menu, docsList } from "@/shared/mocks/menuList";
-import { Button } from "@/components/Button/Button";
-
+import { menu } from "@/shared/mocks/content";
 interface SandwichMenuList {
   isOpen: boolean;
   closeMenu: () => void;
@@ -38,13 +38,7 @@ export const SandwichMenuList: FC<SandwichMenuList> = ({
         text="Contact Us"
         variant="orange"
       />
-      <ul className={s.docs}>
-        {docsList.map((item) => (
-          <li key={item.id} className={s.docItem}>
-            <Link href={item.link}>{item.text}</Link>
-          </li>
-        ))}
-      </ul>
+      <DocList />
     </div>
   );
 };
