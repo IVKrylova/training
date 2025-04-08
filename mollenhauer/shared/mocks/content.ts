@@ -4,6 +4,7 @@ import {
   BenefitListType,
   PartnerListType,
   ClientsListType,
+  TeamListType,
 } from "../types/content";
 
 import benefitImg from "@/public/benefits.png";
@@ -16,6 +17,15 @@ import spenner from "@/public/spennerLogo.svg";
 import interCem from "@/public/InterCemLogo.svg";
 import heidelbergCemen from "@/public/heidelbergLogo.svg";
 import lafergeHolcim from "@/public/lafargeHolcimLogo.svg";
+import timNicolas from "@/public/timNicolas.png";
+import klausDieter from "@/public/klausDieter.png";
+import bernhardMeyer from "@/public/bernhardMeyer.png";
+import alexanderJung from "@/public/alexanderJung.png";
+import stefanSchniedermeier from "@/public/stefanSchniedermeier.png";
+import stefanWiek from "@/public/stefanWiek.png";
+import defaultAvatar from "@/public/defaultAvatar.png";
+import domenikSchmidt from "@/public/domenikSchmidt.png";
+import manuelaSonntag from "@/public/manuelaSonntag.png";
 
 export const menu: Menu = [
   {
@@ -327,5 +337,140 @@ export const ClientsList: ClientsListType = [
     text: "Pulvinar nisl nulla elit integer diam maecenas. Mauris nunc at arcu urna. Erat quisque neque, a augue lectus vitae faucibus facilisi. Aenean mauris duis sed congue magna scelerisque dolor eget in. Euismod eros, in cursus aliquam. Suspendisse odio est nullam vulputate quis nam ultricies.",
     name: "Jack Carty",
     job: "SEO",
+  },
+];
+
+export const teamList: TeamListType = [
+  {
+    department: "Leadership Team",
+    team: [
+      {
+        id: 1,
+        name: "Tim-Nicolas Mollenhauer",
+        position: "CEO",
+        link: "#",
+        about:
+          "Viverra in turpis vitae tincidunt. Odio nunc netus consectetur libero duis. Est quis vitae, sed egestas vehicula.",
+        avatar: timNicolas,
+        isOrangeBorde: true,
+        isAdmin: true
+      },
+      {
+        id: 2,
+        name: "Klaus-Dieter Mollenhauer",
+        position: "Creative Director",
+        link: "#",
+        about:
+          "Duis aenean ultricies ullamcorper neque cras vel. Quam sem turpis est morbi nunc odio feugiat pellentesque. Eget risus lectus donec tempus cras. Amet amet, auctor habitasse tristique pellentesque id velit.",
+        avatar: klausDieter,
+        isBlueBorder: true,
+        isAdmin: true
+      },
+    ],
+  },
+  {
+    department: "Engineers",
+    team: [
+      {
+        id: 3,
+        name: "Bernhard Meyer",
+        position: "Senior Steel Structures Engineer",
+        avatar: bernhardMeyer,
+      },
+      {
+        id: 4,
+        name: "Alexander Jung",
+        position: "Project Engineer",
+        avatar: alexanderJung,
+      },
+      {
+        id: 5,
+        name: "Stefan Schnieder",
+        position: "Project Engineer",
+        avatar: stefanSchniedermeier,
+      },
+      {
+        id: 6,
+        name: "Stefan Wiek",
+        position: "Project Engineer",
+        avatar: stefanWiek,
+      },
+      {
+        id: 7,
+        name: "vacancy",
+        position: "Senior Engineer Concrete",
+        avatar: defaultAvatar,
+      },
+    ],
+  },
+  {
+    department: "Technical staff",
+    team: [
+      {
+        id: 8,
+        name: "Domenik Schmidt",
+        position: "Head of Layout & Design",
+        avatar: domenikSchmidt,
+      },
+      {
+        id: 9,
+        name: "Manuela Sonntag",
+        position: "Reinforcement Technician",
+        avatar: manuelaSonntag,
+      },
+      {
+        id: 10,
+        name: "Mark Peters",
+        position: "Planning Permission Design",
+        avatar: bernhardMeyer,
+      },
+      {
+        id: 11,
+        name: "Katarina Maslanova",
+        position: "Structural Drawings",
+        avatar: alexanderJung,
+      },
+      {
+        id: 12,
+        name: "Benedikt Schröder-Schlüter",
+        position: "Structural Drawings",
+        avatar: stefanSchniedermeier,
+      },
+      {
+        id: 13,
+        name: "Michael Dick",
+        position: "Structural Drawings",
+        avatar: stefanWiek,
+      },
+    ],
+  },
+  {
+    department: "Engineering Trainees",
+    team: [
+      {
+        id: 14,
+        name: "Najwa Hasan",
+        position: "Position",
+        avatar: stefanSchniedermeier,
+      },
+      {
+        id: 15,
+        name: "Leonie Kahr",
+        position: "Position",
+        avatar: stefanWiek,
+      },
+    ],
+  },
+  {
+    department: "Other Team Members",
+    team: [
+      {
+        id: 16,
+        name: "Michelle Michalik",
+        position: "Assistent to the Management",
+        avatar: manuelaSonntag,
+        isOrangeBorde: true,
+      },
+    ],
   },
 ];
