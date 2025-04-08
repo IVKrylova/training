@@ -10,7 +10,9 @@ export const useScroll = (pixels: number) => {
 
     window.addEventListener("scroll", updateIsScrolled);
 
-    return () => window.removeEventListener("scroll", updateIsScrolled);
+    return () => {
+      window.removeEventListener("scroll", updateIsScrolled);
+    };
   }, []);
 
   return isScrolled;

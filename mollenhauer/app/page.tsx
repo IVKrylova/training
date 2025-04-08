@@ -9,15 +9,17 @@ import { Team } from "@/features/Team/Team";
 import { Map } from "@/features/Map/Map";
 
 export default function Home() {
-  return <main>
-    <Hero />
-    <Sevrises />
-    <Expertise />
-    <Benefits />
-    <Partners />
-    <Clients />
-    <Support />
-    <Team />
-    <Map />
-  </main>;
+  return (
+    <main>
+      <Hero />
+      <Sevrises />
+      <Expertise />
+      <Benefits />
+      <Partners />
+      <Clients />
+      <Support />
+      <Team />
+      <Map />
+    </main>
+  );
 }

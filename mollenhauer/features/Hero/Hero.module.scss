@@ -1,5 +1,5 @@
-@import "../../styles/fonts";
-@import "../../styles/media";
+@use "../../styles/fonts" as *;
+@use "../../styles/media" as *;
 
 .section {
   background-image: url(../../public/bg.png);

@@ -1,6 +1,6 @@
-@import "../../styles/fonts";
-@import "../../styles/media";
-@import "../../styles//pagination";
+@use "../../styles/fonts" as *;
+@use "../../styles/media" as *;
+@use "../../styles//pagination" as *;
 
 .section {
   padding: 0 16px;
