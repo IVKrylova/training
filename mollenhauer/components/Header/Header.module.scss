@@ -1,5 +1,5 @@
-@import "../../styles/media";
-@import "../../styles/fonts";
+@use "../../styles/media" as *;
+@use "../../styles/fonts" as *;
 
 .header {
   display: flex;

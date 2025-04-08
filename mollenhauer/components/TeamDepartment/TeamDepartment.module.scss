@@ -1,6 +1,6 @@
-@import "../../styles/fonts";
-@import "../../styles/media";
-@import "../../styles/graphics";
+@use "../../styles/fonts" as *;
+@use "../../styles/media" as *;
+@use "../../styles/graphics" as *;
 
 .wrap {
   display: flex;

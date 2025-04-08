@@ -1,5 +1,5 @@
-@import "../../styles/fonts";
-@import "../../styles/media";
+@use "../../styles/fonts" as *;
+@use "../../styles/media" as *;
 
 .section {
   padding: 0 16px 122px;
