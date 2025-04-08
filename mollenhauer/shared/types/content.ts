@@ -52,7 +52,7 @@ export type TeamMemberType = {
   avatar: StaticImageData;
   isBlueBorder?: boolean;
   isOrangeBorde?: boolean;
-  isAdmin?: boolean
+  isAdmin?: boolean;
 };
 
 export type TeamType = {
@@ -61,3 +61,11 @@ export type TeamType = {
 };
 
 export type TeamListType = TeamType[];
+
+export type socialMediaItem = {
+  name: string;
+  logo: StaticImageData;
+  link: string;
+};
+
+export type socialMediaListType = socialMediaItem[];

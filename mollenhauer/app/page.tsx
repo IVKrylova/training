@@ -6,6 +6,7 @@ import { Partners } from "@/features/Partners/Partners";
 import { Sevrises } from "@/features/Sevrises/Sevrises";
 import { Support } from "@/features/Support/Support";
 import { Team } from "@/features/Team/Team";
+import { Map } from "@/features/Map/Map";
 
 export default function Home() {
   return <main>
@@ -17,5 +18,6 @@ export default function Home() {
     <Clients />
     <Support />
     <Team />
+    <Map />
   </main>;
 }
