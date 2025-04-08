@@ -10,6 +10,7 @@
   width: 100%;
   z-index: 1000;
   transition: 0.2s;
+  max-width: 1728px;
 
   @include tablet {
     padding: 8px 0 0 44px;
