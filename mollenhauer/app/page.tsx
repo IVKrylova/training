@@ -6,7 +6,7 @@ import { Partners } from "@/features/Partners/Partners";
 import { Sevrises } from "@/features/Sevrises/Sevrises";
 import { Support } from "@/features/Support/Support";
 import { Team } from "@/features/Team/Team";
-import { Map } from "@/features/Map/Map";
+import { Contacts } from "@/features/Contacts/Contacts";
 
 export default function Home() {
   return (
@@ -19,7 +19,7 @@ export default function Home() {
       <Clients />
       <Support />
       <Team />
-      <Map />
+      <Contacts />
     </main>
   );
 }
