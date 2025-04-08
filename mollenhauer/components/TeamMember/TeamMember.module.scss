@@ -76,12 +76,19 @@
       content: "";
       position: absolute;
       z-index: -1;
-      bottom: -30px;
-      right: 0;
+      bottom: -5px;
+      right: 40px;
       background-image: url(../../public/blueRectangle.svg);
-      width: 246px;
-      height: 201px;
+      width: 100px;
+      height: 90px;
       background-repeat: no-repeat;
+      rotate: -11deg;
+
+      @include desktop {
+        bottom: -30px;
+        width: 246px;
+        height: 201px;
+      }
     }
   }
 

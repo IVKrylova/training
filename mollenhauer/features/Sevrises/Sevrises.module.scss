@@ -20,8 +20,8 @@
 
     @include tablet {
       background-image: url(../../public/servisesBgTablet.png);
-      top: -466px;
-      height: 1886px;
+      top: -506px;
+      height: 1994px;
     }
 
     @include desktop {
@@ -64,14 +64,14 @@
   @include tablet {
     padding-left: 108px;
     max-width: 450px;
-    padding-bottom: 390px;
+    padding-bottom: 445px;
   }
 
   @include desktop {
     padding-left: 294px;
     max-width: 450px;
     max-width: 780px;
-    padding-bottom: 674px;
+    padding-bottom: 812px;
     @include fontS18W400;
   }
 }
@@ -89,12 +89,12 @@
     width: 100%;
     margin-left: -36px;
     align-items: flex-end;
-    margin-top: -580px;
+    margin-top: -638px;
   }
 
   @include desktop {
     margin-left: -414px;
-    margin-top: -890px;
+    margin-top: -1038px;
   }
 
   li:not(:first-of-type) {

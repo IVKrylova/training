@@ -41,7 +41,7 @@ export const Clients: FC = (): ReactNode => {
         modules={[Pagination]}
         className={s.swiperWrap}
         breakpoints={{
-          768: {
+          834: {
             spaceBetween: 232,
           },
         }}

@@ -42,7 +42,7 @@ export const Partners: FC = (): ReactNode => {
           loop
           navigation
           breakpoints={{
-            768: {
+            834: {
               grid: {
                 rows: 1,
               },

@@ -55,7 +55,7 @@ export const Benefits: FC = (): ReactNode => {
           spaceBetween={16}
           loop
           breakpoints={{
-            768: {
+            834: {
               slidesPerView: 1,
               spaceBetween: 0,
               loop: false,
