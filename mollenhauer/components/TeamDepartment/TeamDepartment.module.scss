@@ -6,18 +6,37 @@
   display: flex;
   gap: 40px;
   flex-direction: column;
-	position: relative;
-	padding-bottom: 32px;
+  position: relative;
+  padding-bottom: 32px;
+
+  @include tablet {
+    flex-direction: row;
+    align-items: flex-end;
+    padding-bottom: 0;
+  }
 
   &::after {
     @include borderHorizontal;
     @include partnersBorderBottom;
+
+    @include tablet {
+      display: none;
+    }
   }
 
   .title {
     @include fontS26W300;
     color: var(--light-title-color);
     position: relative;
+
+    @include tablet {
+      rotate: -90deg;
+      height: fit-content;
+      white-space: nowrap;
+      align-items: flex-end;
+      width: 30px;
+      @include fontS28W300;
+    }
 
     &::before {
       position: absolute;
@@ -28,6 +47,11 @@
       left: -5px;
       background-color: var(--orange-color);
       z-index: -1;
+
+      @include tablet {
+        width: 74px;
+        height: 22px;
+      }
     }
   }
 
@@ -36,9 +60,28 @@
     flex-wrap: wrap;
     column-gap: 12px;
     row-gap: 32px;
+    position: relative;
+
+    @include tablet {
+      padding-bottom: 32px;
+      column-gap: 1px;
+			width: 100%;
+    }
+
+    &::after {
+      @include tablet {
+        @include borderHorizontal;
+        @include partnersBorderBottom;
+      }
+    }
   }
 
   .isAdmin {
     row-gap: 48px;
+
+    @include tablet {
+      flex-direction: row;
+      gap: 8px;
+    }
   }
 }

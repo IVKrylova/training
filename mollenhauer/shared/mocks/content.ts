@@ -385,7 +385,7 @@ export const teamList: TeamListType = [
       },
       {
         id: 5,
-        name: "Stefan Schniedermeier",
+        name: "Stefan Schnieder",
         position: "Project Engineer",
         avatar: stefanSchniedermeier,
       },

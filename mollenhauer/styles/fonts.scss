@@ -136,6 +136,11 @@
 }
 
 // size 28
+@mixin fontS28W300 {
+  font-size: 28px;
+  font-weight: 300;
+}
+
 @mixin fontS28W700 {
   font-size: 28px;
   font-weight: 700;

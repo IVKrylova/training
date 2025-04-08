@@ -11,6 +11,10 @@
     flex-direction: column;
     gap: 8px;
 
+    @include tablet {
+      gap: 12px;
+    }
+
     .name {
       @include fontS15W700;
       color: var(--black-color);
@@ -28,7 +32,7 @@
       align-items: center;
       @include fontS14W400;
       color: var(--black-color);
-			max-width: 110px;
+      max-width: 110px;
 
       .icon {
         width: 16px;
@@ -38,7 +42,7 @@
 
     .adminPosition {
       @include fontS16W400;
-			max-width: fit-content;
+      max-width: fit-content;
 
       .adminIcon {
         width: 19px;
@@ -51,9 +55,9 @@
       color: var(--grey-text-color);
     }
 
-		.link {
-			margin-top: 9px;
-		}
+    .link {
+      margin-top: 9px;
+    }
   }
 }
 
@@ -61,7 +65,15 @@
   gap: 30px;
   flex-direction: row;
 
+  @include tablet {
+    gap: 21px;
+  }
+
   .adminDescription {
     gap: 16px;
+
+    @include tablet {
+      max-width: 140px;
+    }
   }
 }

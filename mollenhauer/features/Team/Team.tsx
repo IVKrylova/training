@@ -17,7 +17,7 @@ export const Team: FC = (): ReactNode => {
       </p>
       <ul className={s.teamList}>
         {teamList.map((el) => (
-          <li key={el.department}>
+          <li key={el.department} className={s.item}>
             <TeamDepartment
               department={el.department}
               isAdmin={el.team[0]?.isAdmin}
