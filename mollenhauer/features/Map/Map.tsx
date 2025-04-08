@@ -64,7 +64,7 @@ export const Map: FC = (): ReactNode => {
               {socialMediaList.map((el) => (
                 <li key={el.name}>
                   <a href={el.link}>
-                    <Image src={el.logo} alt={el.name} width={30} height={30} />
+                    <Image className={s.socislLogo} src={el.logo} alt={el.name} width={30} height={30} />
                   </a>
                 </li>
               ))}
