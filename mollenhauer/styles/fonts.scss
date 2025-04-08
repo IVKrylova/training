@@ -26,14 +26,19 @@
 }
 
 // size 14
-@mixin fontS14W700 {
+@mixin fontS14W300 {
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 300;
 }
 
 @mixin fontS14W400 {
   font-size: 14px;
   font-weight: 400;
+}
+
+@mixin fontS14W700 {
+  font-size: 14px;
+  font-weight: 700;
 }
 
 // size 15

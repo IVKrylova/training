@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import { ReactNode } from "react";
 import cn from "classnames";
+import Head from "next/head";
 
 import { Header } from "@/components/Header/Header";
+import { Footer } from "@/components/Footer/Footer";
 
 import "./globals.css";
 import s from "./page.module.scss";
-import Head from "next/head";
 
 export const metadata: Metadata = {
   title: "Molenhauer",
@@ -26,6 +27,7 @@ export default function RootLayout({
       <body className={cn(s.body)}>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
