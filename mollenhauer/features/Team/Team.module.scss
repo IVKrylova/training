@@ -2,18 +2,44 @@
 @import "../../styles/media";
 
 .section {
-  padding: 0 16px;
+  padding: 0 16px 122px;
   margin-top: 112px;
   position: relative;
+
+  @include tablet {
+    margin-top: 126px;
+    padding: 0 44px 138px;
+  }
+
+  @include desktop {
+    margin-top: 184px;
+    padding: 0 144px 227px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 107px;
+    height: 90px;
+    bottom: 0;
+    left: 0;
+    background-image: url(../../public/teamBg.svg);
+    background-repeat: no-repeat;
+
+    @include desktop {
+      width: 156px;
+      height: 143px;
+			background-size: cover;
+    }
+  }
 
   .title {
     @include fontS30W700;
     color: var(--black-color);
-  }
 
-  @include tablet {
-    margin-top: 126px;
-    padding: 0 44px;
+		@include desktop {
+			@include fontS40W700;
+    }
   }
 
   .subtitle {
@@ -23,6 +49,12 @@
     letter-spacing: -1px;
     max-width: 340px;
     margin-bottom: 40px;
+
+		@include desktop {
+			margin-top: 40px;
+			margin-bottom: 78px;
+			@include fontS32W400;
+    }
   }
 
   .teamList {
@@ -32,7 +64,11 @@
 
     @include tablet {
       gap: 72px;
-      grid-template-columns: max-content auto;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+		@include desktop {
+      gap: 80px;
     }
   }
 
