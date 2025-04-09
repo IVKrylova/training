@@ -19,3 +19,10 @@ yarn-error.log*
 # env files (can opt-in for committing if needed)
 .env*
 
+# Optional npm cache directory
+.npm
+
+# Optional REPL history
+.DS_Store
+.idea
+.vscode
