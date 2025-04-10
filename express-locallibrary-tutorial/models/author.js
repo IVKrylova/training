@@ -24,4 +24,16 @@ AuthorSchema.virtual("lifespan").get(function () {
   } - ${this.date_of_death ? moment(this.date_of_death).format("MMMM Do, YYYY") : ""}`;
 });
 
+AuthorSchema.virtual("date_of_birth_formatted").get(function () {
+  return this.date_of_birth
+    ? moment(this.date_of_birth).format("YYYY-MM-DD")
+    : "";
+});
+
+AuthorSchema.virtual("date_of_death_formatted").get(function () {
+  return this.date_of_death
+    ? moment(this.date_of_death).format("YYYY-MM-DD")
+    : "";
+});
+
 module.exports = mongoose.model("Author", AuthorSchema);
