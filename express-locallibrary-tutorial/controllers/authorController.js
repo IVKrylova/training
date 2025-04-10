@@ -1,5 +1,6 @@
 const Author = require("../models/author");
 const Book = require("../models/book");
+const { body, validationResult } = require("express-validator");
 
 exports.author_list = async function (req, res, next) {
   try {
@@ -40,19 +41,97 @@ exports.author_detail = async function (req, res, next) {
 };
 
 exports.author_create_get = function (req, res) {
-  res.send("NOT IMPLEMENTED: Author create GET");
+  res.render("author_form", { title: "Create Author" });
 };
 
-exports.author_create_post = function (req, res) {
-  res.send("NOT IMPLEMENTED: Author create POST");
+exports.author_create_post = [
+  body("first_name")
+    .trim()
+    .isLength({ min: 1 })
+    .escape()
+    .withMessage("First name must be specified.")
+    .isAlphanumeric()
+    .withMessage("First name has non-alphanumeric characters."),
+  body("family_name")
+    .trim()
+    .isLength({ min: 1 })
+    .escape()
+    .withMessage("Family name must be specified.")
+    .isAlphanumeric()
+    .withMessage("Family name has non-alphanumeric characters."),
+  body("date_of_birth", "Invalid date of birth")
+    .optional({ values: "falsy" })
+    .isISO8601()
+    .toDate(),
+  body("date_of_death", "Invalid date of death")
+    .optional({ values: "falsy" })
+    .isISO8601()
+    .toDate(),
+
+  async function (req, res, next) {
+    try {
+      const errors = validationResult(req);
+
+      const author = new Author({
+        first_name: req.body.first_name,
+        family_name: req.body.family_name,
+        date_of_birth: req.body.date_of_birth,
+        date_of_death: req.body.date_of_death,
+      });
+
+      if (!errors.isEmpty()) {
+        res.render("author_form", {
+          title: "Create Author",
+          author: author,
+          errors: errors.array(),
+        });
+        return;
+      } else {
+        await author.save();
+        res.redirect(author.url);
+      }
+    } catch (err) {
+      next(err);
+    }
+  },
+];
+
+exports.author_delete_get = async function (req, res, next) {
+  try {
+    const author = await Author.findById(req.params.id);
+    if (author == null) {
+      res.redirect("/catalog/authors");
+    }
+    const authors_books = Book.find({ author: req.params.id });
+    res.render("author_delete", {
+      title: "Delete Author",
+      author: author,
+      author_books: authors_books,
+    });
+  } catch (err) {
+    next(err);
+  }
 };
 
-exports.author_delete_get = function (req, res) {
-  res.send("NOT IMPLEMENTED: Author delete GET");
-};
+exports.author_delete_post = async function (req, res, next) {
+  try {
+    const author = await Author.findById(req.body.authorid);
+    const authors_books = await Book.find({ author: req.body.authorid });
 
-exports.author_delete_post = function (req, res) {
-  res.send("NOT IMPLEMENTED: Author delete POST");
+    if (authors_books.length > 0) {
+      res.render("author_delete", {
+        title: "Delete Author",
+        author: author,
+        author_books: authors_books,
+      });
+      return;
+    } else {
+      await Author.findOneAndDelete({ _id: req.body.authorid });
+      res.redirect("/catalog/authors");
+    }
+  } catch (err) {
+    next(err);
+  }
 };
 
 exports.author_update_get = function (req, res) {
