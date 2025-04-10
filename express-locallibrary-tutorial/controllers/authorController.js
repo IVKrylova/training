@@ -1,6 +1,7 @@
 const Author = require("../models/author");
 const Book = require("../models/book");
 const { body, validationResult } = require("express-validator");
+const catchNotFoundError = require("../utils/catchNotFoundError")
 
 exports.author_list = async function (req, res, next) {
   try {
@@ -23,12 +24,7 @@ exports.author_detail = async function (req, res, next) {
       Author.findById(req.params.id),
       Book.find({ author: req.params.id }, "title summary"),
     ]);
-
-    if (author === null) {
-      const err = new Error("Author not found");
-      err.status = 404;
-      return next(err);
-    }
+    catchNotFoundError(author, next);
 
     res.render("author_detail", {
       title: "Author Detail",

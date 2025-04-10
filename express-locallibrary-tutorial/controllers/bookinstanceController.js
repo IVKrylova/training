@@ -1,6 +1,7 @@
 const BookInstance = require("../models/bookinstance");
 const Book = require("../models/book");
 const { body, validationResult } = require("express-validator");
+const catchNotFoundError = require("../utils/catchNotFoundError");
 
 exports.bookinstance_list = async function (req, res, next) {
   try {
@@ -19,12 +20,7 @@ exports.bookinstance_detail = async function (req, res, next) {
     const bookInstance = await BookInstance.findById(req.params.id).populate(
       "book"
     );
-
-    if (bookInstance === null) {
-      const err = new Error("Book copy not found");
-      err.status = 404;
-      return next(err);
-    }
+    catchNotFoundError(bookInstance, next);
 
     res.render("bookinstance_detail", {
       title: "Book:",
