@@ -3,6 +3,7 @@ const Author = require("../models/author");
 const Genre = require("../models/genre");
 const BookInstance = require("../models/bookinstance");
 const { body, validationResult } = require("express-validator");
+const catchNotFoundError = require("../utils/catchNotFoundError");
 
 exports.index = async function (req, res, next) {
   try {
@@ -48,12 +49,7 @@ exports.book_detail = async function (req, res, next) {
       Book.findById(req.params.id).populate("author").populate("genre").exec(),
       BookInstance.find({ book: req.params.id }).exec(),
     ]);
-
-    if (book === null) {
-      const err = new Error("Book not found");
-      err.status = 404;
-      return next(err);
-    }
+    catchNotFoundError(book, next);
 
     res.render("book_detail", {
       title: book.title,
@@ -159,14 +155,10 @@ exports.book_update_get = async function (req, res, next) {
     const book = await Book.findById(req.params.id)
       .populate("author")
       .populate("genre");
+    catchNotFoundError(book, next);
+
     const authors = await Author.find();
     const genres = await Genre.find();
-
-    if (book == null) {
-      const err = new Error("Book not found");
-      err.status = 404;
-      return next(err);
-    }
 
     for (let all_g_iter = 0; all_g_iter < genres.length; all_g_iter++) {
       for (
