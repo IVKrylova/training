@@ -95,7 +95,7 @@ exports.author_create_post = [
 exports.author_delete_get = async function (req, res, next) {
   try {
     const author = await Author.findById(req.params.id);
-    if (author == null) {
+    if (author === null) {
       res.redirect("/catalog/authors");
     }
     const authors_books = Book.find({ author: req.params.id });

@@ -142,12 +142,46 @@ exports.book_create_post = [
   },
 ];
 
-exports.book_delete_get = function (req, res) {
-  res.send("NOT IMPLEMENTED: Book delete GET");
+exports.book_delete_get = async function (req, res, next) {
+  try {
+    const book = await Book.findById(req.params.id);
+    if (book === null) {
+      res.redirect("/catalog/books");
+    }
+    const book_instances = await BookInstance.find({ book: req.params.id });
+    const author = await Author.findById(book.author);
+    res.render("book_delete", {
+      title: "Delete Book",
+      book: book,
+      book_instances: book_instances,
+      author: author
+    });
+  } catch (err) {
+    next(err);
+  }
 };
 
-exports.book_delete_post = function (req, res) {
-  res.send("NOT IMPLEMENTED: Book delete POST");
+exports.book_delete_post = async function (req, res, next) {
+  try {
+    const book = await Book.findById(req.body.bookid);
+    const book_instances = await BookInstance.find({ book: req.body.bookid });
+    const author = await Author.findById(book.author);
+
+    if (book_instances.length > 0) {
+      res.render("book_delete", {
+        title: "Delete Book",
+        book: book,
+        book_instances: book_instances,
+        author: author
+      });
+      return;
+    } else {
+      await Book.findOneAndDelete({ _id: req.body.bookid });
+      res.redirect("/catalog/books");
+    }
+  } catch (err) {
+    next(err);
+  }
 };
 
 exports.book_update_get = async function (req, res, next) {

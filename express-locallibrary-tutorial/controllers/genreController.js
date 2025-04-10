@@ -1,6 +1,7 @@
 const Genre = require("../models/genre");
 const Book = require("../models/book");
 const { body, validationResult } = require("express-validator");
+const catchNotFoundError = require("../utils/catchNotFoundError");
 
 exports.genre_list = async function (req, res) {
   try {
@@ -18,11 +19,7 @@ exports.genre_list = async function (req, res) {
 exports.genre_detail = async function (req, res, next) {
   try {
     const genre = await Genre.findById(req.params.id);
-    if (genre == null) {
-      var err = new Error("Genre not found");
-      err.status = 404;
-      return next(err);
-    }
+    catchNotFoundError(genre, next);
 
     const genre_books = await Book.find({ genre: req.params.id });
 
@@ -74,12 +71,42 @@ exports.genre_create_post = [
   },
 ];
 
-exports.genre_delete_get = function (req, res) {
-  res.send("NOT IMPLEMENTED: Genre delete GET");
+exports.genre_delete_get = async function (req, res, next) {
+  try {
+    const genre = await Genre.findById(req.params.id);
+    if (genre === null) {
+      res.redirect("/catalog/genres");
+    }
+    const books = await Book.find({ genre: { $in: [req.params.id] } });
+    res.render("genre_delete", {
+      title: "Delete Genre",
+      genre: genre,
+      books: books,
+    });
+  } catch (err) {
+    next(err);
+  }
 };
 
-exports.genre_delete_post = function (req, res) {
-  res.send("NOT IMPLEMENTED: Genre delete POST");
+exports.genre_delete_post = async function (req, res, next) {
+  try {
+    const genre = await Genre.findById(req.body.genreid);
+    const books = await Book.find({ genre: { $in: [req.body.genreid] } });
+
+    if (books.length > 0) {
+      res.render("genre_delete", {
+        title: "Delete Genre",
+        genre: genre,
+        books: books,
+      });
+      return;
+    } else {
+      await Genre.findOneAndDelete({ _id: req.body.genreid });
+      res.redirect("/catalog/genres");
+    }
+  } catch (err) {
+    next(err);
+  }
 };
 
 exports.genre_update_get = function (req, res) {

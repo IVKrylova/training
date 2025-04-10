@@ -2,6 +2,7 @@ const BookInstance = require("../models/bookinstance");
 const Book = require("../models/book");
 const { body, validationResult } = require("express-validator");
 const catchNotFoundError = require("../utils/catchNotFoundError");
+const Author = require("../models/author");
 
 exports.bookinstance_list = async function (req, res, next) {
   try {
@@ -85,12 +86,32 @@ exports.bookinstance_create_post = [
   },
 ];
 
-exports.bookinstance_delete_get = function (req, res) {
-  res.send("NOT IMPLEMENTED: BookInstance delete GET");
+exports.bookinstance_delete_get = async function (req, res, next) {
+  try {
+    const bookinstance = await BookInstance.findById(req.params.id);
+    if (bookinstance === null) {
+      res.redirect("/catalog/bookinstances");
+    }
+    const book = await Book.findById(bookinstance.book);
+    const author = await Author.findById(book.author);
+    res.render("bookinstance_delete", {
+      title: "Delete BookInstance",
+      bookinstance: bookinstance,
+      book: book,
+      author: author
+    });
+  } catch (err) {
+    next(err);
+  }
 };
 
-exports.bookinstance_delete_post = function (req, res) {
-  res.send("NOT IMPLEMENTED: BookInstance delete POST");
+exports.bookinstance_delete_post = async function (req, res, next) {
+  try {
+    await BookInstance.findOneAndDelete({ _id: req.body.bookinstanceid });
+    res.redirect("/catalog/bookinstances");
+  } catch (err) {
+    next(err);
+  }
 };
 
 exports.bookinstance_update_get = function (req, res) {
