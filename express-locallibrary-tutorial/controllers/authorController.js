@@ -1,7 +1,7 @@
 const Author = require("../models/author");
 const Book = require("../models/book");
 const { body, validationResult } = require("express-validator");
-const catchNotFoundError = require("../utils/catchNotFoundError")
+const catchNotFoundError = require("../utils/catchNotFoundError");
 
 exports.author_list = async function (req, res, next) {
   try {
@@ -130,10 +130,68 @@ exports.author_delete_post = async function (req, res, next) {
   }
 };
 
-exports.author_update_get = function (req, res) {
-  res.send("NOT IMPLEMENTED: Author update GET");
+exports.author_update_get = async function (req, res, next) {
+  try {
+    const author = await Author.findById(req.params.id);
+    catchNotFoundError(author, next);
+
+    res.render("author_form", {
+      title: "Update Author",
+      author: author,
+    });
+  } catch (err) {
+    next(err);
+  }
 };
 
-exports.author_update_post = function (req, res) {
-  res.send("NOT IMPLEMENTED: Author update POST");
-};
+exports.author_update_post = [
+  body("first_name")
+    .trim()
+    .isLength({ min: 1 })
+    .escape()
+    .withMessage("First name must be specified.")
+    .isAlphanumeric()
+    .withMessage("First name has non-alphanumeric characters."),
+  body("family_name")
+    .trim()
+    .isLength({ min: 1 })
+    .escape()
+    .withMessage("Family name must be specified.")
+    .isAlphanumeric()
+    .withMessage("Family name has non-alphanumeric characters."),
+  body("date_of_birth", "Invalid date of birth")
+    .optional({ values: "falsy" })
+    .isISO8601()
+    .toDate(),
+  body("date_of_death", "Invalid date of death")
+    .optional({ values: "falsy" })
+    .isISO8601()
+    .toDate(),
+
+  async function (req, res, next) {
+    try {
+      const errors = validationResult(req);
+      const author = new Author({
+        first_name: req.body.first_name,
+        family_name: req.body.family_name,
+        date_of_birth: req.body.date_of_birth,
+        date_of_death: req.body.date_of_death,
+        _id: req.params.id,
+      });
+
+      if (!errors.isEmpty()) {
+        res.render("author_form", {
+          title: "Update Author",
+          author: author,
+          errors: errors.array(),
+        });
+        return;
+      } else {
+        await Author.findByIdAndUpdate(req.params.id, author);
+        res.redirect(author.url);
+      }
+    } catch (err) {
+      next(err);
+    }
+  },
+];
